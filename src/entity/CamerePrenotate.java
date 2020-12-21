@@ -3,9 +3,7 @@ package entity;
 import java.io.Serializable;
 import java.util.GregorianCalendar;
 
-/**
- * Created by gabriele
- */
+
 public class CamerePrenotate implements Serializable {
 
     private static final long serialVersionUID = 1L;

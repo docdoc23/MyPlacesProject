@@ -15,7 +15,7 @@ import java.util.Locale;
 public class ControlloreCreaAmministratore {
 
 	//Costruttore
-	public ControlloreCreaAmministratore(){
+	public ControlloreCreaAmministratore(){//default
 		
 	}
 	

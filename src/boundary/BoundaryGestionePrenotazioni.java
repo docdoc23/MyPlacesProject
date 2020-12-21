@@ -19,7 +19,7 @@ public class BoundaryGestionePrenotazioni {
     private ControlloreVisualizzaPrenotazioni cvp;
     private ControlloreRimuoviPrenotazione crp;
 
-    public BoundaryGestionePrenotazioni(){
+    public BoundaryGestionePrenotazioni(){//default
 
     }
 

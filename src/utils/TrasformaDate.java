@@ -3,12 +3,10 @@ package utils;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
-/**
- * Created by gabriele on 08/12/16.
- */
+
 public class TrasformaDate {
 
-    public TrasformaDate(){
+    public TrasformaDate(){//default
     }
 
     public static GregorianCalendar trasformaInGregorianCalendar(String data){

@@ -5,9 +5,7 @@ import entity.Messaggio;
 
 import java.util.ArrayList;
 
-/**
- * Created by alfredo
- */
+
 public class BoundaryPosta {
 
     private ControllorePosta cP;

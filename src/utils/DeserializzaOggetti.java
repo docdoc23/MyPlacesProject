@@ -8,7 +8,7 @@ import java.io.ObjectInputStream;
 public class DeserializzaOggetti {
 	
 	// Costruttore
-	public DeserializzaOggetti(){
+	public DeserializzaOggetti(){//default
 		
 	}
 	

@@ -26,7 +26,7 @@ public class ControlloreRimuoviUtente {
 	
 	//Costruttore
 	
-	public ControlloreRimuoviUtente(){
+	public ControlloreRimuoviUtente(){//default
 		
 		
 	}

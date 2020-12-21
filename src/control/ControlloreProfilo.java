@@ -15,7 +15,7 @@ import java.util.Date;
 public class ControlloreProfilo {
 
 	
-	public ControlloreProfilo() {
+	public ControlloreProfilo() {//default
 	}
 
 

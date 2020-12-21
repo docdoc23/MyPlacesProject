@@ -15,7 +15,7 @@ public class VerificaInput {
 
 	// Costruttore
 
-	public VerificaInput(){
+	public VerificaInput(){//default
 		
 	}
 	// Metodo che controlla se il prezzo indicato in un form JSP sia effettivamente un numero intero, che non sia negativo e che non sia 

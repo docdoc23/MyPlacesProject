@@ -19,7 +19,7 @@ import java.util.Random;
 public class ControllorePosta {
 
 
-	public ControllorePosta() {
+	public ControllorePosta() {//default
 
 	}
 

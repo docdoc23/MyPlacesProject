@@ -13,9 +13,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-/**
- * Created by maria
- */
+
 public class ControlloreRispondiDomande {
 
     private String path = Constants.FAQ_PATH;

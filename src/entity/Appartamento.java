@@ -15,7 +15,7 @@ public class Appartamento extends Locazione {
 
 	
 	// Costruttori
-	public Appartamento(){
+	public Appartamento(){//default
 
 	}
 	

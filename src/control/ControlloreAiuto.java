@@ -18,14 +18,10 @@ public class ControlloreAiuto {
 
     
 
-    public ControlloreAiuto() {}
+    public ControlloreAiuto() {/*default*/}
 
 
-	public ControlloreAiuto(String percorso, ArrayList<DomandaUtente> domArray) {
-		super();
-		this.percorso = percorso;
-		this.domArray = domArray;
-	}
+	
 
 
 	//ritorna la lista delle sole domande, per cui è già stata fornita una risposta

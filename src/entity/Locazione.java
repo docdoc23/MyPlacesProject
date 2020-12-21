@@ -17,7 +17,7 @@ public class Locazione implements Serializable {
 	protected boolean pet;
 	
 	// Costruttori
-	public Locazione(){
+	public Locazione(){//default
 
 	}
 	public Locazione(String nomeLocazione,String postiTotali,String provincia, String indirizzo, String userLocatore, String prezzo,

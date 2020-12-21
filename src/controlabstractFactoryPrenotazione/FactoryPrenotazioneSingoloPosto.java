@@ -4,7 +4,7 @@ package controlabstractFactoryPrenotazione;
 public class FactoryPrenotazioneSingoloPosto extends FactoryPrenotazione {
 
 
-    private FactoryPrenotazioneSingoloPosto(){
+    private FactoryPrenotazioneSingoloPosto(){//default
 
     }
 

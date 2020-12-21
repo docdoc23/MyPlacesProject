@@ -21,7 +21,7 @@ public class ControlloreProfiloAmministratore
 extends ControlloreProfilo {
 
     // Costruttore
-    public ControlloreProfiloAmministratore() {
+    public ControlloreProfiloAmministratore() {//default
     }
 
     // Viene dato in input un username, il metodo ricerca nel file l'oggetto Utente corrispondente e lo restituisce.

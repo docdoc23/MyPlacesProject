@@ -6,7 +6,7 @@ public class DeserializzazioneException extends Exception {
 	
 	// Costruttori
 
-	public DeserializzazioneException(){
+	public DeserializzazioneException(){//default
 		
 	}
 	

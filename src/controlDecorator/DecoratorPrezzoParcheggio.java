@@ -1,8 +1,6 @@
 package controlDecorator;
 
-/**
- * Created by maria
- */
+
 //ConcreteDecorator 1
 public class DecoratorPrezzoParcheggio extends DecoratorPrezzo {
 

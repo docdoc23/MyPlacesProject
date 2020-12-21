@@ -16,7 +16,7 @@ public class ControlloreLoginAmministratore {
 	public static ArrayList<Utente> utenti = new ArrayList<>();
 
 	//Costruttore
-	public ControlloreLoginAmministratore(){
+	public ControlloreLoginAmministratore(){//default
 	
 	}
 	

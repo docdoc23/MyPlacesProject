@@ -12,7 +12,7 @@ public class Ostello extends Locazione {
 
 	
 	// Costruttori
-	public Ostello(){
+	public Ostello(){//default
 
 	}
 	

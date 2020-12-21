@@ -11,9 +11,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
 
-/**
- * Created by maria
- */
+
 
 public class BoundaryVisualizzaPrezzo {
 

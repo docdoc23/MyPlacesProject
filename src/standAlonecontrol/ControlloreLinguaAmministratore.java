@@ -5,9 +5,7 @@ import constants.Constants;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
-/**
- * Created by alfredo
- */
+
 public class ControlloreLinguaAmministratore {
 
     public ResourceBundle getBundleFromProp() {

@@ -1,8 +1,6 @@
 package controlDecorator;
 
-/**
- * Created by maria
- */
+
 //Decorator
 public abstract class DecoratorPrezzo extends ComponentePrezzo {
 

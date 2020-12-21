@@ -14,7 +14,7 @@ public class Albergo extends Locazione{
 	private String orarioCena;
 
 	// Costruttori
-	public Albergo(){
+	public Albergo(){//default
 	}
 	
 	public Albergo(String nomeLocazione,String postTotali,String provincia, String indirizzo, String userLocatore, String prezzo,

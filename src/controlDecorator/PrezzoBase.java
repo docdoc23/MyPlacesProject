@@ -1,8 +1,6 @@
 package controlDecorator;
 
-/**
- * Created by maria
- */
+
 //ConcreteComponent
 public class PrezzoBase extends ComponentePrezzo {
 

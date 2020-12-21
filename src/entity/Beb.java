@@ -11,7 +11,7 @@ public class Beb extends Locazione {
 	private String orarioColazione;
 
 	// Costruttori
-	public Beb(){
+	public Beb(){//default
 
 	}
 	

@@ -1,8 +1,6 @@
 package controlDecorator;
 
-/**
- * Created by maria
- */
+
 //ConcreteDecorator 3
 public class DecoratorPrezzoWifi extends DecoratorPrezzo {
 

@@ -5,9 +5,7 @@ import control.ControlloreLingua;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
-/**
- * Created by alfredo
- */
+
 public class BoundaryLingua {
 
     private ControlloreLingua cL;

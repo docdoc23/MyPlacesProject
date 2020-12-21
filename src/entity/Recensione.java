@@ -9,7 +9,7 @@ public class Recensione implements Serializable{
     private int numeroStelle;
     private String testoRecensione;
 
-    public Recensione(){}
+    public Recensione(){/*default*/}
 
     public Recensione( String nomeLocazione, String nomeRecensore, int numeroStelle, String testoRecensione){
         this.nomeLocazione=nomeLocazione;

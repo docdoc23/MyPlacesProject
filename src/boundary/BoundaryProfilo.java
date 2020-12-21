@@ -3,9 +3,7 @@ package boundary;
 import control.ControlloreProfilo;
 import entity.Utente;
 
-/**
- * Created by alfredo
- */
+
 public class BoundaryProfilo {
 
     private ControlloreProfilo cP;

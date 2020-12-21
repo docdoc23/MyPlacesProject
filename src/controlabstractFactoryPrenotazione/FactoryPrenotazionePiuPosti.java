@@ -4,7 +4,7 @@ package controlabstractFactoryPrenotazione;
 public class FactoryPrenotazionePiuPosti extends FactoryPrenotazione {
 
 
-    private FactoryPrenotazionePiuPosti(){
+    private FactoryPrenotazionePiuPosti(){//default
     }
 
     //Instance necessaria per il singleton

@@ -13,7 +13,7 @@ public class CasaVacanza extends Locazione {
 	private String numeroLetti;
 	
 	// Costruttori
-	public CasaVacanza(){
+	public CasaVacanza(){//default
 
 	}
 

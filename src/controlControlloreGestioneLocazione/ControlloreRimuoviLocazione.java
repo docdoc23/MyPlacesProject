@@ -10,9 +10,7 @@ import utils.SerializzaOggetti;
 import java.io.File;
 import java.util.ArrayList;
 
-/**
- * Created by maria
- */
+
 
 // Questa classe serve a rimuovere una locazione dal sistema da parte del proprietario. 
 // Vengono anche eliminate le prenotazioni associate alla locazione da rimuovere

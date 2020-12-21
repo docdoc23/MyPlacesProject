@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class BoundaryAiuto {
     ControlloreAiuto ca = new ControlloreAiuto();
 
-    public BoundaryAiuto() throws DeserializzazioneException {
+    public BoundaryAiuto() throws DeserializzazioneException {/*default*/
     }
 
     public ArrayList<String> ritornaDomande(String type) throws DeserializzazioneException {

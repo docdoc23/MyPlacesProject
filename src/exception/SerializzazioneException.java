@@ -6,7 +6,7 @@ public class SerializzazioneException extends Exception {
 	
 	// Costruttori
 
-	public SerializzazioneException(){
+	public SerializzazioneException(){//default
 		
 	}
 	

@@ -15,7 +15,7 @@ public class ControlloreRicercaGlobale {
     private String percorsoOstello = Constants.OSTELLI_PATH;
 
     //costruttore
-    public ControlloreRicercaGlobale(){
+    public ControlloreRicercaGlobale(){//default
     }
 
     /*

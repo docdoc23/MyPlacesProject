@@ -4,9 +4,7 @@ import entity.*;
 
 
 
-/**
- * Created by maria
- */
+
 public class FactoryInserimentoLocazione {
 
     private static FactoryInserimentoLocazione instance = null;

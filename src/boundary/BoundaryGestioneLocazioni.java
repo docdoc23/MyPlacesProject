@@ -114,7 +114,7 @@ public class BoundaryGestioneLocazioni {
 
     private ControlloreInserimentoLocazione cil;
 
-    public BoundaryGestioneLocazioni(){
+    public BoundaryGestioneLocazioni(){//default
 
     }
 

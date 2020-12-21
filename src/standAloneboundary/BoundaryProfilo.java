@@ -13,9 +13,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
-/**
- * Created by alfredo
- */
+
 public class BoundaryProfilo {
 
     //Pannelli

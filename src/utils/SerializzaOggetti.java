@@ -10,7 +10,7 @@ public class SerializzaOggetti {
 	
 	// Costruttore
 	
-	public SerializzaOggetti(){
+	public SerializzaOggetti(){//default
 		
 	}
 	
