@@ -9,9 +9,7 @@ import exception.SerializzazioneException;
 
 import java.util.ArrayList;
 
-/**
- * Created by maria
- */
+
 public class BoundaryGestioneLocazioni {
 
     public String getCommand() {

@@ -8,9 +8,7 @@ import utils.DeserializzaOggetti;
 import java.io.File;
 import java.util.ArrayList;
 
-/**
- * Created by maria
- */
+
 
 public class ControlloreVisualizzaLocazioni {
     private String percorsoAlbergo = Constants.ALBERGHI_PATH;
@@ -35,7 +33,7 @@ public class ControlloreVisualizzaLocazioni {
         File file = new File(percorsoAlbergo);
         if (file.length() == 0) {
 
-            ;
+            //;
 
         } else {
 
@@ -50,7 +48,7 @@ public class ControlloreVisualizzaLocazioni {
         file = new File(percorsoAppartamento);
         if (file.length() == 0) {
 
-            ;
+            //;
 
         } else {
             locazioniProvvisorio = (ArrayList<Locazione>) dobj.deserializza(percorsoAppartamento);
@@ -64,7 +62,7 @@ public class ControlloreVisualizzaLocazioni {
         file = new File(percorsoBeb);
         if (file.length() == 0) {
 
-            ;
+            //;
 
         } else {
             locazioniProvvisorio = (ArrayList<Locazione>) dobj.deserializza(percorsoBeb);
@@ -78,7 +76,7 @@ public class ControlloreVisualizzaLocazioni {
         file = new File(percorsoCasaVacanza);
         if (file.length() == 0) {
 
-            ;
+            //;
 
         } else {
             locazioniProvvisorio = (ArrayList<Locazione>) dobj.deserializza(percorsoCasaVacanza);
@@ -92,7 +90,7 @@ public class ControlloreVisualizzaLocazioni {
         file = new File(percorsoOstello);
         if (file.length() == 0) {
 
-            ;
+            //;
 
         } else {
             locazioniProvvisorio = (ArrayList<Locazione>) dobj.deserializza(percorsoOstello);

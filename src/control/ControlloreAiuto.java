@@ -10,19 +10,21 @@ import utils.SerializzaOggetti;
 import java.io.File;
 import java.util.ArrayList;
 
-/**
-  * Created by maria
- */
+
 public class ControlloreAiuto {
 
     private String percorso = Constants.FAQ_PATH;
     private ArrayList<DomandaUtente> domArray =new ArrayList<>();
 
-    public ControlloreAiuto()  {
+    
 
-    }
+    public ControlloreAiuto() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
-    //ritorna la lista delle sole domande, per cui è già stata fornita una risposta
+
+	//ritorna la lista delle sole domande, per cui è già stata fornita una risposta
     public ArrayList<String> ritornaDomande(int type) throws DeserializzazioneException {
         File file = new File(percorso);
         DeserializzaOggetti dobj = new DeserializzaOggetti();

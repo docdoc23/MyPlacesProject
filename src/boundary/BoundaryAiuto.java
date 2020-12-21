@@ -6,9 +6,7 @@ import exception.SerializzazioneException;
 
 import java.util.ArrayList;
 
-/**
- * Created by maria
- */
+
 public class BoundaryAiuto {
     ControlloreAiuto ca = new ControlloreAiuto();
 
