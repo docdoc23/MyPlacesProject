@@ -11,14 +11,14 @@ import java.util.ArrayList;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
-/**
- * Created by Alfredo Milani
- */
+
 public class ControlloreLingua {
 
 
-    public ControlloreLingua() {
-    }
+    public ControlloreLingua() {/*default*/}
+    
+    
+    
 
 
     /**
