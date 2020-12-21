@@ -18,9 +18,13 @@ public class ControlloreAiuto {
 
     
 
-    public ControlloreAiuto() {
+    public ControlloreAiuto() {}
+
+
+	public ControlloreAiuto(String percorso, ArrayList<DomandaUtente> domArray) {
 		super();
-		// TODO Auto-generated constructor stub
+		this.percorso = percorso;
+		this.domArray = domArray;
 	}
 
 
