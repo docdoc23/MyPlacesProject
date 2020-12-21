@@ -22,7 +22,7 @@ public class ControlloreRegistraPrenotazioniSingoloPosto extends ControlloreRegi
         ArrayList<Prenotazione> listaPrenotazione =  new ArrayList<>();
         SerializzaOggetti sobj  = new SerializzaOggetti();
 
-        numeroPersone="1";
+        if (numeroPersone!="1") {numeroPersone="1";}
 
         String percorso="";
         if(tipo.equals("Appartamento"))

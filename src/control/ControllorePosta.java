@@ -9,6 +9,7 @@ import utils.DeserializzaOggetti;
 import utils.SerializzaOggetti;
 
 import java.io.File;
+import java.security.SecureRandom;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -183,7 +184,7 @@ public class ControllorePosta {
             for(int i=0; i<elencoMessaggi.size(); ++i){
                 elencoMessaggi.get(i).getOggetto().equals(oggetto);
                 elencoMessaggi.remove(i);
-                break;
+                
             }
 
 
@@ -208,6 +209,7 @@ public class ControllorePosta {
         return dateFormat.format(date);
     }
 
+    
     // Metodo per assegnare un codice univoco ad un messaggio.
     @SuppressWarnings("unchecked")
     private static int assegnaCodice() {
@@ -230,6 +232,8 @@ public class ControllorePosta {
 
         Random r = new Random();
         int n = r.nextInt(10000);
+        
+        
 
         return n;
     }

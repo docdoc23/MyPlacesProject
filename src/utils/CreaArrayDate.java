@@ -24,10 +24,22 @@ public class CreaArrayDate {
         if(f.delete()){
 
             FileWriter w = new FileWriter(percorsoTemp);
-            BufferedWriter b = new BufferedWriter(w);
-            b.write("");
-            b.flush();
-            b.close();
+            
+            try(BufferedWriter b = new BufferedWriter(w)){
+            	b.write("");
+                b.flush();
+                b.close();
+            }catch(IOException e) {
+            	e.printStackTrace();
+            }
+            
+            
+            
+            
+            //BufferedWriter b = new BufferedWriter(w);
+            //b.write("");
+            //b.flush();
+            //b.close();
 
             SerializzaOggetti.serializza(elencoDate, percorsoTemp);
 

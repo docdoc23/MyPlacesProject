@@ -47,9 +47,23 @@ public class VerificaInput {
         else {
             FileReader f;
             f = new FileReader(percorsoProvince);
-            BufferedReader b;
-            b = new BufferedReader(f);
-            String s;
+            //BufferedReader b;
+            //b=new BufferedReader(f)
+            try(BufferedReader b = new BufferedReader(f)){
+            	String s;
+                while (true) {
+                    s = b.readLine();
+                    if (s == null)
+                        break;
+                    if (s.trim().equalsIgnoreCase(pr))
+                        return true;
+                }
+                
+            }catch (IOException e) {
+                e.printStackTrace();
+            }
+            return false;
+            /*String s;
             while (true) {
                 s = b.readLine();
                 if (s == null)
@@ -57,7 +71,7 @@ public class VerificaInput {
                 if (s.trim().equalsIgnoreCase(pr))
                     return true;
             }
-            return false;
+            return false;*/
         }
     }
     //metodo che controlla se data inizio e data fine siano state inserite correttamente
