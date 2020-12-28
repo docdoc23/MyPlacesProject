@@ -9,6 +9,7 @@
 <%@page import="entity.Utente" %>
 <%@page import="exception.DeserializzazioneException" %>
 <%@ page import="java.util.ArrayList" %>
+<%@ page import="java.util.List" %>
 <%@ page import="java.util.ResourceBundle" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -45,7 +46,7 @@
     }
 
 
-    ArrayList<Locazione> locazioni = new ArrayList<>();
+    List<Locazione> locazioni = new ArrayList<>();
     try {
         locazioni = bgestioneLocazioni.chiamaControlloreVisualizza(username);
     } catch (DeserializzazioneException e) {

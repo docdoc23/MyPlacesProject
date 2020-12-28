@@ -15,6 +15,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
+import java.util.List;
 
 
 public class ControlloreDisponibilitaSingoloPosto extends ControlloreDisponibilita{
@@ -32,7 +33,7 @@ public class ControlloreDisponibilitaSingoloPosto extends ControlloreDisponibili
         if(loc.getClass()== CasaVacanza.class)
             percorso=percorsoPrenotazioniCaseVacanza;
 
-        ArrayList<GregorianCalendar> datePrenotazione= CreaArrayDate.restituisciArrayDate(gcInizio, gcFine);
+        List<GregorianCalendar> datePrenotazione= CreaArrayDate.restituisciArrayDate(gcInizio, gcFine);
         ArrayList<PostiDisponibili> prenotateList = new ArrayList<>();
         ArrayList<PostiDisponibili> temp = new ArrayList<>();
 

@@ -10,13 +10,14 @@ import utils.SerializzaOggetti;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.List;
 
 
 
 public class ControlloreInserimentoLocazione {
 
 
-    private ArrayList<Locazione> locazioniList = new ArrayList<>();
+    private List<Locazione> locazioniList = new ArrayList<>();
 
     private String command; //il command, settato dalla boundary quado chiama il controllore serve per identificare il tipo di locazione da creare
     private String path;

@@ -6,6 +6,7 @@ import exception.SerializzazioneException;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class AdapterRicercaPerLocazione implements ControlloreRicercaPerLocazione {
@@ -29,7 +30,7 @@ public class AdapterRicercaPerLocazione implements ControlloreRicercaPerLocazion
     public Object ricerca(String tipoLocazione, String provincia, String prezzo,int numeroGiorni) throws ClassNotFoundException,
             InstantiationException, IllegalAccessException, DeserializzazioneException, IOException, SerializzazioneException, InterruptedException {
 
-        ArrayList<Locazione> elencoLocazioni;
+        List<Locazione> elencoLocazioni;
         elencoLocazioni =  crg.ricercaGlobale(provincia,prezzo,numeroGiorni);
 
         switch (tipoLocazione) {
@@ -56,7 +57,7 @@ public class AdapterRicercaPerLocazione implements ControlloreRicercaPerLocazion
                 return appartamentiDisponibili;
 
             case "Beb":
-                ArrayList<Beb> bebDisponibili = new ArrayList<>(); //Qui verranno inseriti i beb da restituire all'getUtente
+            	ArrayList<Beb> bebDisponibili = new ArrayList<>(); //Qui verranno inseriti i beb da restituire all'getUtente
 
 
                 for (Locazione loc : elencoLocazioni) {
@@ -67,7 +68,7 @@ public class AdapterRicercaPerLocazione implements ControlloreRicercaPerLocazion
                 }
                 return bebDisponibili;
             case "CasaVacanza":
-                ArrayList<CasaVacanza> casaVacanzeDisponibili = new ArrayList<>(); //Qui verranno inseriti gli appartamenti da restituire all'getUtente
+            	ArrayList<CasaVacanza> casaVacanzeDisponibili = new ArrayList<>(); //Qui verranno inseriti gli appartamenti da restituire all'getUtente
 
 
                 for (Locazione loc : elencoLocazioni) {
@@ -78,7 +79,7 @@ public class AdapterRicercaPerLocazione implements ControlloreRicercaPerLocazion
                 }
                 return casaVacanzeDisponibili;
             case "Ostello":
-                ArrayList<Ostello> ostelliDisponibili = new ArrayList<>(); //Qui verranno inseriti gli ostelli da restituire all'getUtente
+            	ArrayList<Ostello> ostelliDisponibili = new ArrayList<>(); //Qui verranno inseriti gli ostelli da restituire all'getUtente
 
 
                 for (Locazione loc : elencoLocazioni) {
@@ -114,8 +115,8 @@ public class AdapterRicercaPerLocazione implements ControlloreRicercaPerLocazion
 
         switch (tipoLocazione) {
             case "Albergo":
-                ArrayList<Albergo> elencoAlberghi = (ArrayList<Albergo>) ricerca("Albergo", provincia, prezzo, numeroGiorni);
-                ArrayList<Albergo> alberghiDisponibili = new ArrayList<>(); //Qui verranno inseriti gli alberghi da restituire all'getUtente
+            	ArrayList<Albergo> elencoAlberghi = (ArrayList<Albergo>) ricerca("Albergo", provincia, prezzo, numeroGiorni);
+            	ArrayList<Albergo> alberghiDisponibili = new ArrayList<>(); //Qui verranno inseriti gli alberghi da restituire all'getUtente
 
                 for (Albergo albergo : elencoAlberghi) {
                     if ((albergo.isParcheggio() == parcheggio) &&
@@ -128,8 +129,8 @@ public class AdapterRicercaPerLocazione implements ControlloreRicercaPerLocazion
                 return alberghiDisponibili;
 
             case "Appartamento":
-                ArrayList<Appartamento> elencoAppartamenti = (ArrayList<Appartamento>) ricerca("Appartamento", provincia, prezzo, numeroGiorni);
-                ArrayList<Appartamento> appartamentiDisponibili = new ArrayList<>(); //Qui verranno inseriti gli appartamenti da restituire all'getUtente
+            	ArrayList<Appartamento> elencoAppartamenti = (ArrayList<Appartamento>) ricerca("Appartamento", provincia, prezzo, numeroGiorni);
+            	ArrayList<Appartamento> appartamentiDisponibili = new ArrayList<>(); //Qui verranno inseriti gli appartamenti da restituire all'getUtente
 
                 for (Appartamento appartamento : elencoAppartamenti) {
                     if ((appartamento.isParcheggio() == parcheggio) &&
@@ -142,8 +143,8 @@ public class AdapterRicercaPerLocazione implements ControlloreRicercaPerLocazion
                 return appartamentiDisponibili;
 
             case "Beb":
-                ArrayList<Beb> elencoBeb = (ArrayList<Beb>) ricerca("Beb", provincia, prezzo, numeroGiorni);
-                ArrayList<Beb> bebDisponibili = new ArrayList<>(); //Qui verranno inseriti i beb da restituire all'getUtente
+            	ArrayList<Beb> elencoBeb = (ArrayList<Beb>) ricerca("Beb", provincia, prezzo, numeroGiorni);
+            	ArrayList<Beb> bebDisponibili = new ArrayList<>(); //Qui verranno inseriti i beb da restituire all'getUtente
 
 
                 for (Beb beb : elencoBeb) {
@@ -155,8 +156,8 @@ public class AdapterRicercaPerLocazione implements ControlloreRicercaPerLocazion
                 }
                 return bebDisponibili;
             case "CasaVacanza":
-                ArrayList<CasaVacanza> elencoCasaVacanze = (ArrayList<CasaVacanza>) ricerca("CasaVacanza", provincia, prezzo, numeroGiorni);
-                ArrayList<CasaVacanza> casaVacanzeDisponibili = new ArrayList<>(); //Qui verranno inseriti gli appartamenti da restituire all'getUtente
+            	ArrayList<CasaVacanza> elencoCasaVacanze = (ArrayList<CasaVacanza>) ricerca("CasaVacanza", provincia, prezzo, numeroGiorni);
+            	ArrayList<CasaVacanza> casaVacanzeDisponibili = new ArrayList<>(); //Qui verranno inseriti gli appartamenti da restituire all'getUtente
 
                 for (CasaVacanza casa : elencoCasaVacanze) {
                     if ((casa.isParcheggio() == parcheggio) &&
@@ -171,8 +172,8 @@ public class AdapterRicercaPerLocazione implements ControlloreRicercaPerLocazion
 
             case "Ostello":
 
-                ArrayList<Ostello> elencoOstelli = (ArrayList<Ostello>) ricerca("Ostello", provincia, prezzo, numeroGiorni);
-                ArrayList<Ostello> ostelliDisponibili = new ArrayList<>(); //Qui verranno inseriti gli ostelli da restituire all'Utente
+            	ArrayList<Ostello> elencoOstelli = (ArrayList<Ostello>) ricerca("Ostello", provincia, prezzo, numeroGiorni);
+            	ArrayList<Ostello> ostelliDisponibili = new ArrayList<>(); //Qui verranno inseriti gli ostelli da restituire all'Utente
 
                 for (Ostello ostello : elencoOstelli) {
                     if ((ostello.isParcheggio() == parcheggio) &&

@@ -5,6 +5,7 @@ import entity.Locazione;
 import exception.DeserializzazioneException;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ControlloreRicercaGlobale {
     //percorsi
@@ -24,7 +25,7 @@ public class ControlloreRicercaGlobale {
     in modo da fa partire nello stesso momento la ricerca sui 5 file sui quali sono memorizzati i diversi
     tipo di locazioni
      */
-    public ArrayList<Locazione> ricercaGlobale(String provincia, String prezzo,int numeroGiorni) throws DeserializzazioneException, InterruptedException {
+    public List<Locazione> ricercaGlobale(String provincia, String prezzo,int numeroGiorni) throws DeserializzazioneException, InterruptedException {
 
       //  ArrayList<Locazione> locazioni = new ArrayList<>();
 

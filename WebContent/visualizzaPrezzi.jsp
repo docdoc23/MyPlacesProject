@@ -18,6 +18,7 @@
 <%@ page import="exception.DeserializzazioneException" %>
 <%@ page import="exception.SerializzazioneException" %>
 <%@ page import="java.util.ArrayList" %>
+<%@ page import="java.util.List" %>
 <%
 
     BoundaryVisualizzaPrezzo bvp = new BoundaryVisualizzaPrezzo();
@@ -56,7 +57,7 @@
 
     String nomeLocazione = elencoLocazioni.get(Integer.parseInt(id)).getNomeLocazione();
 
-    ArrayList<Recensione> recensioni = new ArrayList<>();
+    List<Recensione> recensioni = new ArrayList<>();
     try {
         recensioni= bvr.visualizzaRecensioni(nomeLocazione);
     } catch (DeserializzazioneException e) {

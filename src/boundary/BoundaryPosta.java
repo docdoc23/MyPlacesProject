@@ -3,7 +3,8 @@ package boundary;
 import control.ControllorePosta;
 import entity.Messaggio;
 
-import java.util.ArrayList;
+//import java.util.ArrayList;
+import java.util.List;
 
 
 public class BoundaryPosta {
@@ -18,7 +19,7 @@ public class BoundaryPosta {
         return cP.ricercaMessaggioPerCodice(codice);
     }
 
-    public ArrayList<Messaggio> ritornaMessaggi(String username) {
+    public List<Messaggio> ritornaMessaggi(String username) {
         return cP.ricercaMessaggi(username);
     }
 

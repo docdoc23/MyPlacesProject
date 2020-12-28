@@ -1,6 +1,7 @@
 <%@ page import="entity.Prenotazione" %>
 <%@ page import="exception.DeserializzazioneException" %>
 <%@ page import="java.util.ArrayList" %>
+<%@ page import="java.util.List" %>
 <%@ page import="java.util.Calendar" %>
 <%@ page import="java.util.GregorianCalendar" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -21,7 +22,7 @@
 <jsp:useBean id="bvp" scope="page" class="boundary.BoundaryGestionePrenotazioni"/>
 
 <%
-    ArrayList<Prenotazione> elencoPrenotazione =new ArrayList<>();
+    List<Prenotazione> elencoPrenotazione =new ArrayList<>();
     try {
         elencoPrenotazione = bvp.visualizzaPerViaggiatore(bl.ritornaUsername());
     } catch (DeserializzazioneException e) {

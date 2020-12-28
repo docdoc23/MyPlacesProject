@@ -7,6 +7,7 @@
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="java.util.Locale" %>
 <%@ page import="java.util.ResourceBundle" %>
+<%@ page import="java.util.List" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
@@ -31,7 +32,7 @@
     boolean loggedin = bl.controlloAccesso();
     int eliminazione = -1;
     BoundaryPosta boundaryPosta = new BoundaryPosta();
-    ArrayList<Messaggio> elencoMessaggiUser;
+    List<Messaggio> elencoMessaggiUser;
 
     String codeMsg = request.getParameter("Cod");
     // Per maggiore robustezza

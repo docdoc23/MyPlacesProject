@@ -9,7 +9,8 @@ import exception.DeserializzazioneException;
 import exception.SerializzazioneException;
 
 import java.io.IOException;
-import java.util.ArrayList;
+//import java.util.ArrayList;
+import java.util.List;
 
 
 public class BoundaryGestionePrenotazioni {
@@ -33,12 +34,12 @@ public class BoundaryGestionePrenotazioni {
     }
 
 
-    public ArrayList<Prenotazione> visualizzaPerViaggiatore(String cliente) throws DeserializzazioneException, InterruptedException {
+    public List<Prenotazione> visualizzaPerViaggiatore(String cliente) throws DeserializzazioneException, InterruptedException {
         cvp = new ControlloreVisualizzaPrenotazioni();
         return cvp.visualizzaPrenotazioniPerViaggiatore(cliente);
     }
 
-    public ArrayList<Prenotazione> visualizzaPerProprietario(String proprietario) throws DeserializzazioneException, InterruptedException {
+    public List<Prenotazione> visualizzaPerProprietario(String proprietario) throws DeserializzazioneException, InterruptedException {
         cvp= new ControlloreVisualizzaPrenotazioni();
         return cvp.visualizzaPrenotazioniPerProprietario(proprietario);
     }

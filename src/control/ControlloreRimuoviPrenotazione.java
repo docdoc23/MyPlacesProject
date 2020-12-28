@@ -12,6 +12,7 @@ import utils.SerializzaOggetti;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
+import java.util.List;
 
 public class ControlloreRimuoviPrenotazione {
 
@@ -105,7 +106,7 @@ public class ControlloreRimuoviPrenotazione {
         ArrayList<PostiDisponibili> postiDisponibili;
         Integer postiOccupati = Integer.parseInt(prenotazione.getNumeroPersone().trim());
 
-        ArrayList<GregorianCalendar> datePrenotazione;
+        List<GregorianCalendar> datePrenotazione;
         datePrenotazione = CreaArrayDate.restituisciArrayDate(dataInizio, dataFine);
 
         DeserializzaOggetti dobj = new DeserializzaOggetti();
@@ -139,7 +140,7 @@ public class ControlloreRimuoviPrenotazione {
         GregorianCalendar dataFine = prenotazione.getDataFine();
         ArrayList<PostiDisponibili> postiDisponibili;
 
-        ArrayList<GregorianCalendar> datePrenotazione;
+        List<GregorianCalendar> datePrenotazione;
 
         datePrenotazione = CreaArrayDate.restituisciArrayDate(dataInizio, dataFine);
 

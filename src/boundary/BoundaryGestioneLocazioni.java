@@ -8,6 +8,7 @@ import exception.DeserializzazioneException;
 import exception.SerializzazioneException;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class BoundaryGestioneLocazioni {
@@ -174,10 +175,10 @@ public class BoundaryGestioneLocazioni {
 
 
 
-    public ArrayList<Locazione> chiamaControlloreVisualizza(String username) throws DeserializzazioneException {
+    public List<Locazione> chiamaControlloreVisualizza(String username) throws DeserializzazioneException {
             ControlloreVisualizzaLocazioni crl = new ControlloreVisualizzaLocazioni();
 
-            ArrayList<Locazione> locazioni;
+            List<Locazione> locazioni;
             locazioni = crl.visualizzaLocazioni(username);
 
             return locazioni;

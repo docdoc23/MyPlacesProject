@@ -16,15 +16,16 @@
 <%@ page import="exception.DeserializzazioneException" %>
 <%@ page import="exception.SerializzazioneException" %>
 <%@ page import="java.util.ArrayList" %>
+<%@ page import="java.util.List" %>
 <%
 
     String id = request.getParameter("id");
     id = id.substring(0,1);
 
-	ArrayList<String> locRimosse = new ArrayList<>();
+	List<String> locRimosse = new ArrayList<>();
 	String nomeLocazioneRimossa="";
 
-    ArrayList<Locazione> elencoLocazioni= (ArrayList<Locazione>) request.getSession().getAttribute("locDaRimuovere");
+    List<Locazione> elencoLocazioni= (ArrayList<Locazione>) request.getSession().getAttribute("locDaRimuovere");
     try {
         nomeLocazioneRimossa=b.chiamaControlloreRimozione(elencoLocazioni.get(Integer.parseInt(id)));
     } catch (SerializzazioneException | DeserializzazioneException e) {

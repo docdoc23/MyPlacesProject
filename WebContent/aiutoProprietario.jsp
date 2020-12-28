@@ -1,6 +1,6 @@
 <%@ page import="boundary.BoundaryAiuto" %>
 <%@ page import="exception.DeserializzazioneException" %>
-
+<%@ page import="java.util.List" %>
 <%@ page import="java.util.ArrayList" %><%--
   Created by IntelliJ IDEA.
   User: maria
@@ -46,7 +46,7 @@
         e.printStackTrace();
     }
 
-    ArrayList<String> domande = null;
+    List<String> domande = null;
     try {
         domande = ba.ritornaDomande(type);
     } catch (DeserializzazioneException e) {

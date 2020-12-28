@@ -8,12 +8,13 @@ import standAloneboundary.BoundaryLoginErrato;
 import utils.DeserializzaOggetti;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ControlloreLoginAmministratore {
 	
 	//Variabili e percorso
 	
-	public static ArrayList<Utente> utenti = new ArrayList<>();
+	public static List<Utente> utenti = new ArrayList<>();
 
 	//Costruttore
 	public ControlloreLoginAmministratore(){//default

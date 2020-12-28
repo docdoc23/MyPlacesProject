@@ -6,6 +6,7 @@ import utils.DeserializzaOggetti;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.locks.ReentrantLock;
 
 
@@ -47,7 +48,7 @@ public class ThreadVisualizzaPrenotazioniViaggiatore implements Runnable {
         }
     }
 
-    public static ArrayList<Prenotazione> getPrenotazioni(){
+    public static List<Prenotazione> getPrenotazioni(){
         return prenotazioniViaggiatore;
     }
 

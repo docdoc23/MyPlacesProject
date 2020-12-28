@@ -16,11 +16,13 @@
 <%@page import="entity.*" %>
 <%@ page import="exception.DeserializzazioneException" %>
 <%@ page import="java.util.ArrayList" %>
+<%@ page import="java.util.List" %>
+
 <%
 
 
 String username = bl.ritornaUsername();
-ArrayList<Locazione> locazioni = new ArrayList<Locazione>();
+List<Locazione> locazioni = new ArrayList<Locazione>();
 	try {
 		locazioni = b.chiamaControlloreVisualizza(username);
 	} catch (DeserializzazioneException e) {

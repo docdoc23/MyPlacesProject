@@ -14,6 +14,7 @@ import utils.SerializzaOggetti;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
@@ -63,7 +64,7 @@ public class ControlloreRimuoviUtente {
 				if (utenti.get(i).getUsername().equals(username)) {
 
 					ControlloreVisualizzaLocazioni cvl = new ControlloreVisualizzaLocazioni();
-					ArrayList<Locazione> locazioni = cvl.visualizzaLocazioni(username);
+					List<Locazione> locazioni = cvl.visualizzaLocazioni(username);
 
 					File fileLoc = new File(percorsoLocazioniRimosse);
 					if (fileLoc.length() != 0) {

@@ -9,6 +9,7 @@ import utils.SerializzaOggetti;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class ControlloreAiuto {
@@ -25,7 +26,7 @@ public class ControlloreAiuto {
 
 
 	//ritorna la lista delle sole domande, per cui è già stata fornita una risposta
-    public ArrayList<String> ritornaDomande(int type) throws DeserializzazioneException {
+    public List<String> ritornaDomande(int type) throws DeserializzazioneException {
         File file = new File(percorso);
         DeserializzaOggetti dobj = new DeserializzaOggetti();
 

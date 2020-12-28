@@ -14,6 +14,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Random;
 
 public class ControllorePosta {
@@ -58,7 +59,7 @@ public class ControllorePosta {
      * @param username mittente dei messaggi da cercare all'interno del sistema
      * @return ArrayList contenente tutti e soli i messaggi inviati da @username
      */
-	public ArrayList<Messaggio> ricercaMessaggi(String username) {
+	public List<Messaggio> ricercaMessaggi(String username) {
 
 
             ArrayList<Messaggio> elencoMessaggi = new ArrayList<>();

@@ -11,12 +11,13 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
+import java.util.List;
 
 public class CreaArrayDate {
 
 
     @SuppressWarnings("unchecked")
-    public static  ArrayList<GregorianCalendar> restituisciArrayDate(GregorianCalendar dataInizio, GregorianCalendar dataFine) throws IOException, SerializzazioneException, DeserializzazioneException {
+    public static  List<GregorianCalendar> restituisciArrayDate(GregorianCalendar dataInizio, GregorianCalendar dataFine) throws IOException, SerializzazioneException, DeserializzazioneException {
         String percorsoTemp = Constants.TMPDATE_PATH;
         ArrayList<GregorianCalendar> elencoDate = new ArrayList<>();
         File f = new File(percorsoTemp);

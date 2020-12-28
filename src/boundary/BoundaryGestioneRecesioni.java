@@ -7,6 +7,7 @@ import exception.DeserializzazioneException;
 import exception.SerializzazioneException;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class BoundaryGestioneRecesioni {
 
@@ -20,7 +21,7 @@ public class BoundaryGestioneRecesioni {
         return cr.inserisci(nomeLocazione,tipoLocazione,nomeRecensore,numeroStelle,testoRecensione);
     }
 
-    public ArrayList<Recensione> visualizzaRecensioni(String nomeLocazione) throws DeserializzazioneException {
+    public List<Recensione> visualizzaRecensioni(String nomeLocazione) throws DeserializzazioneException {
 
         return cr.ritornaRecensioni(nomeLocazione);
     }

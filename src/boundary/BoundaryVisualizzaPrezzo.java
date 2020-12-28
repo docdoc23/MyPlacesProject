@@ -10,6 +10,8 @@ import utils.TrasformaDate;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
+import java.util.List;
+
 
 
 
@@ -37,7 +39,7 @@ public class BoundaryVisualizzaPrezzo {
 
         GregorianCalendar gcInizio = TrasformaDate.trasformaInGregorianCalendar(dataInizio);
         GregorianCalendar gcFine = TrasformaDate.trasformaInGregorianCalendar(dataFine);
-        ArrayList<GregorianCalendar> date = CreaArrayDate.restituisciArrayDate(gcInizio,gcFine);
+        List<GregorianCalendar> date = CreaArrayDate.restituisciArrayDate(gcInizio,gcFine);
         return date.size();
 
     }

@@ -5,6 +5,7 @@ import entity.Prenotazione;
 import exception.DeserializzazioneException;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ControlloreVisualizzaPrenotazioni {
 
@@ -20,7 +21,7 @@ public class ControlloreVisualizzaPrenotazioni {
     le prenotazioni associate al viaggiatore
      */
 
-    public ArrayList<Prenotazione> visualizzaPrenotazioniPerViaggiatore (String cliente) throws DeserializzazioneException, InterruptedException {
+    public List<Prenotazione> visualizzaPrenotazioniPerViaggiatore (String cliente) throws DeserializzazioneException, InterruptedException {
 
         ArrayList<Prenotazione> prenotazioneTotali = new ArrayList<>();
 
@@ -59,7 +60,7 @@ public class ControlloreVisualizzaPrenotazioni {
     vengono sfruttati 5 thread ognuno dei quali restituscele prenotazioni associate al viaggiatore
      */
 
-    public ArrayList<Prenotazione> visualizzaPrenotazioniPerProprietario (String proprietario) throws DeserializzazioneException, InterruptedException {
+    public List<Prenotazione> visualizzaPrenotazioniPerProprietario (String proprietario) throws DeserializzazioneException, InterruptedException {
         ArrayList<Prenotazione> prenotazioneTotali = new ArrayList<>();
 
         ThreadVisualizzaPrenotazioniProprietario tAlb = new ThreadVisualizzaPrenotazioniProprietario(proprietario, percorsoPrenotatiAlbergo);

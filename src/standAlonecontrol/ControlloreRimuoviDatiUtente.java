@@ -13,8 +13,10 @@ import standAloneboundary.BoundarySuccesso;
 import utils.DeserializzaOggetti;
 import utils.SerializzaOggetti;
 
+
 import java.io.File;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class ControlloreRimuoviDatiUtente {
@@ -42,7 +44,7 @@ public class ControlloreRimuoviDatiUtente {
         for(Utente utente:utenti){
             if(utente.getUsername().equals(username)){
                 ControlloreVisualizzaLocazioni cvl= new ControlloreVisualizzaLocazioni();
-                ArrayList<Locazione> locazioniUtenteNonRimosso=  cvl.visualizzaLocazioni(username);
+                List<Locazione> locazioniUtenteNonRimosso=  cvl.visualizzaLocazioni(username);
                 System.out.println("username utente tra quelli non rimossi "+ username+" la prima delle sue locazioni "+
                             locazioniUtenteNonRimosso.get(0).getNomeLocazione());
 

@@ -7,6 +7,7 @@ import utils.DeserializzaOggetti;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.List;
 
 
 
@@ -24,7 +25,7 @@ public class ControlloreVisualizzaLocazioni {
 
     // Metodo permette ad un proprietario di visualizzare le proprie locazioni la ricerca avviene in base allo Username.
     @SuppressWarnings("unchecked")
-    public ArrayList<Locazione> visualizzaLocazioni(String username) throws DeserializzazioneException {
+    public List<Locazione> visualizzaLocazioni(String username) throws DeserializzazioneException {
 
         ArrayList<Locazione> locazioni = new ArrayList<>();
         ArrayList<Locazione> locazioniProvvisorio;

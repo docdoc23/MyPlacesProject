@@ -17,6 +17,7 @@
 <%@ page import="exception.DeserializzazioneException" %>
 <%@ page import="exception.SerializzazioneException" %>
 <%@ page import="java.util.ArrayList" %>
+<%@ page import="java.util.List" %>
 
 <%
 
@@ -28,7 +29,7 @@ String numeroPersone = request.getParameter("prenota per");
 id = id.substring(0,1);
 boolean controllo = false;
 
-	ArrayList<Locazione> elencoLocazioni= (ArrayList<Locazione>) request.getSession().getAttribute("loc");
+	List<Locazione> elencoLocazioni= (ArrayList<Locazione>) request.getSession().getAttribute("loc");
 	try {
 		controllo= bgp.effettuaPrenotazione(elencoLocazioni.get(Integer.parseInt(id)), bl.ritornaUsername(),dataInizio,dataFine,numeroPersone);
 	} catch (DeserializzazioneException | SerializzazioneException e) {

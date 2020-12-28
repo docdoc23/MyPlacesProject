@@ -12,6 +12,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
+import java.util.List;
 
 
 public class ControlloreDisponibilitaPiuPosti extends ControlloreDisponibilita{
@@ -34,7 +35,7 @@ public class ControlloreDisponibilitaPiuPosti extends ControlloreDisponibilita{
 
         Integer totali = Integer.parseInt(loc.getPostiTotali().trim());
         Integer postiRichiesti = Integer.parseInt(numeroPersone.trim());
-        ArrayList<GregorianCalendar> datePrenotazione= CreaArrayDate.restituisciArrayDate(gcInizio, gcFine);
+        List<GregorianCalendar> datePrenotazione= CreaArrayDate.restituisciArrayDate(gcInizio, gcFine);
 
         ArrayList<PostiDisponibili> prenotateList = new ArrayList<>();
 

@@ -11,6 +11,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class ControlloreProfilo {
 
@@ -28,7 +29,7 @@ public class ControlloreProfilo {
 	public Utente ottieniUtente(String username) {
 
 
-            ArrayList<Utente> utenti = new ArrayList<>();
+			ArrayList<Utente> utenti = new ArrayList<>();
             try {
                 utenti = (ArrayList<Utente>)
                         DeserializzaOggetti
@@ -73,7 +74,7 @@ public class ControlloreProfilo {
                                             String confermaNuovaPassword) {
 
 
-            ArrayList<Utente> utenti = new ArrayList<>();
+			ArrayList<Utente> utenti = new ArrayList<>();
             try {
                 utenti = (ArrayList<Utente>) DeserializzaOggetti
                         .deserializza(Constants.UTENTI_PATH);

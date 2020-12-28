@@ -12,6 +12,7 @@ import utils.SerializzaOggetti;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.List;
 
 public class ControlloreRecensione {
 
@@ -132,7 +133,7 @@ public class ControlloreRecensione {
     metodo utilizzato per restuire le recensioni in base al nome della locazione
      */
 
-    public ArrayList<Recensione> ritornaRecensioni(String nomeLocazione) throws DeserializzazioneException {
+    public List<Recensione> ritornaRecensioni(String nomeLocazione) throws DeserializzazioneException {
 
 
         File file = new File(percorsoRecensioni);
@@ -159,7 +160,7 @@ public class ControlloreRecensione {
      possibili soluzioni(dato che i voti possibili variano da zero a sei
      */
     public int calcolaMedia(String nomeLocazione) throws DeserializzazioneException {
-        ArrayList<Recensione>recensioni = ritornaRecensioni(nomeLocazione);
+    	List<Recensione>recensioni = ritornaRecensioni(nomeLocazione);
         int numeroRecensioni = recensioni.size();
 
         if(numeroRecensioni==0)

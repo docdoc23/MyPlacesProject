@@ -6,6 +6,7 @@ import utils.DeserializzaOggetti;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class ThreadRicerca implements Runnable{
@@ -52,7 +53,7 @@ public class ThreadRicerca implements Runnable{
         }
     }
 
-    public static ArrayList<Locazione> getLocazioni(){
+    public static List<Locazione> getLocazioni(){
         return  locazioni;
     }
 }

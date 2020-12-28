@@ -8,6 +8,7 @@ import utils.DeserializzaOggetti;
 import utils.SerializzaOggetti;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
@@ -61,7 +62,7 @@ public class ControlloreLingua {
      */
     public Locale getLang(String loggedUser) {
 
-            ArrayList<Utente> utenti = new ArrayList<>();
+    		ArrayList<Utente> utenti = new ArrayList<>();
             try {
                 utenti = (ArrayList<Utente>) DeserializzaOggetti
                         .deserializza(Constants.UTENTI_PATH);
@@ -87,7 +88,7 @@ public class ControlloreLingua {
     public Locale checkUpdatePref(String username, String newLocale) {
 
 
-            ArrayList<Utente> utenteArrayList = new ArrayList<>();
+    		ArrayList<Utente> utenteArrayList = new ArrayList<>();
             try {
                 utenteArrayList = (ArrayList<Utente>)
                         DeserializzaOggetti

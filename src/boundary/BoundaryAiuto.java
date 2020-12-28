@@ -4,7 +4,11 @@ import control.ControlloreAiuto;
 import exception.DeserializzazioneException;
 import exception.SerializzazioneException;
 
-import java.util.ArrayList;
+
+//import java.util.ArrayList;
+import java.util.List;
+
+
 
 
 public class BoundaryAiuto {
@@ -13,7 +17,7 @@ public class BoundaryAiuto {
     public BoundaryAiuto() throws DeserializzazioneException {/*default*/
     }
 
-    public ArrayList<String> ritornaDomande(String type) throws DeserializzazioneException {
+    public List<String> ritornaDomande(String type) throws DeserializzazioneException {
 
         return ca.ritornaDomande(Integer.parseInt(type));
     }

@@ -13,6 +13,7 @@ import utils.VerificaInput;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
+import java.util.List;
 
 
 public class BoundaryRicercaLocazione {
@@ -32,10 +33,10 @@ public class BoundaryRicercaLocazione {
 
         GregorianCalendar gcInizio = TrasformaDate.trasformaInGregorianCalendar(dataInizio);
         GregorianCalendar gcFine = TrasformaDate.trasformaInGregorianCalendar(dataFine);
-        ArrayList<GregorianCalendar> date = CreaArrayDate.restituisciArrayDate(gcInizio,gcFine);
+        List<GregorianCalendar> date = CreaArrayDate.restituisciArrayDate(gcInizio,gcFine);
         int numeroGiorni = date.size();
 
-        ArrayList<Locazione> elencoLocazioni = new ArrayList<>();
+        List<Locazione> elencoLocazioni = new ArrayList<>();
 
         if(commandavAnzataInt==10) {
                 if(commandInt==100){
