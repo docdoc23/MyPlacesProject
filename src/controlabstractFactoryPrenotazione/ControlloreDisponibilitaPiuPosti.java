@@ -1,4 +1,4 @@
-package controlabstractFactoryPrenotazione;
+package controlabstractfactoryprenotazione;
 
 import constants.Constants;
 import entity.*;
@@ -39,7 +39,8 @@ public class ControlloreDisponibilitaPiuPosti extends ControlloreDisponibilita{
 
         ArrayList<PostiDisponibili> prenotateList = new ArrayList<>();
 
-        ArrayList<PostiDisponibili> temp = new ArrayList<PostiDisponibili>();
+        ArrayList<PostiDisponibili> temp = new ArrayList<>();
+        //PostiDisponibili
 
         File file = new File(percorso);
 
@@ -47,8 +48,8 @@ public class ControlloreDisponibilitaPiuPosti extends ControlloreDisponibilita{
         if (file.length() == 0) {
             for (GregorianCalendar data_prenotazione : datePrenotazione) {
                 PostiDisponibili cp = new PostiDisponibili(loc.getNomeLocazione(), data_prenotazione);
-                int contatore_aggiornato = cp.getContatore() + postiRichiesti ;
-                cp.setContatore(contatore_aggiornato);
+                int contatoreaggiornato = cp.getContatore() + postiRichiesti ;
+                cp.setContatore(contatoreaggiornato);
                 if(totali<cp.getContatore())
                     return false;
                 else {
@@ -69,9 +70,9 @@ public class ControlloreDisponibilitaPiuPosti extends ControlloreDisponibilita{
                     if (camera_prenotata.getNomeLocazion().equals(loc.getNomeLocazione()) && data_prenotazione.equals(camera_prenotata.getData())) {
                         if (totali <= camera_prenotata.getContatore())
                             return false;
-                        if (!(totali == camera_prenotata.getContatore())) {
-                            int contatore_aggiornato = camera_prenotata.getContatore() + postiRichiesti;
-                            camera_prenotata.setContatore(contatore_aggiornato);
+                        if ((totali != camera_prenotata.getContatore())) {
+                            int contatoreaggiornato = camera_prenotata.getContatore() + postiRichiesti;
+                            camera_prenotata.setContatore(contatoreaggiornato);
                             condizione = true;
                             break;
                         }
@@ -80,8 +81,8 @@ public class ControlloreDisponibilitaPiuPosti extends ControlloreDisponibilita{
                 if (condizione)
                     continue;
                 PostiDisponibili nuovaData = new PostiDisponibili(loc.getNomeLocazione(), data_prenotazione);
-                int contatore_aggiornato = nuovaData.getContatore() + postiRichiesti;
-                nuovaData.setContatore(contatore_aggiornato);
+                int contatoreaggiornato = nuovaData.getContatore() + postiRichiesti;
+                nuovaData.setContatore(contatoreaggiornato);
                 if(totali<nuovaData.getContatore()){
                     return false;
                 }else {

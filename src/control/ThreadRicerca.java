@@ -11,7 +11,9 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class ThreadRicerca implements Runnable{
 
-    private String percorso, provincia, prezzo;
+    private String percorso;
+    private String provincia;
+    private String prezzo;
     private int numeroGiorni;
     private static ArrayList<Locazione> locazioni= new ArrayList<>();
     private static ReentrantLock l = new ReentrantLock();
@@ -21,7 +23,7 @@ public class ThreadRicerca implements Runnable{
         this.provincia=provincia;
         this.prezzo=prezzo;
         this.numeroGiorni=numeroGiorni;
-    //    ThreadRicerca.locazioni =locazioni;
+    
     }
     @Override
     public void run() {

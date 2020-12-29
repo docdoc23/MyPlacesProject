@@ -1,9 +1,10 @@
 package standAloneboundary;
 
-import standAlonecontrol.ControlloreLinguaAmministratore;
-import standAlonecontrol.ControlloreRimuoviDomande;
-
 import javax.swing.*;
+
+import standalonecontrol.ControlloreLinguaAmministratore;
+import standalonecontrol.ControlloreRimuoviDomande;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

@@ -65,6 +65,9 @@ public class ControlloreRimuoviPrenotazione {
                 rimuoviPrenotazione(prenotazione, percorsoPrenotatiOstello);
                 rimuoviPostiOccupati(prenotazione, percorsoPrenotazioniOstelli);
                 break;
+                
+            default :
+            	break;
         }
 
 
@@ -117,13 +120,13 @@ public class ControlloreRimuoviPrenotazione {
             for (int i = 0; i< postiDisponibili.size(); ++i){
                 if(postiDisponibili.get(i).getNomeLocazion().equals(nomeLocazione) && postiDisponibili.get(i).getData().equals(data)){
                      //se  è presente in postiDisponibili il contatore è almeno 1--> ha senso decrementarlo
-                    int contatore_aggiornato=(postiDisponibili.get(i).getContatore()-postiOccupati);
-                    if(contatore_aggiornato == 0) {
+                    int contatoreaggiornato=(postiDisponibili.get(i).getContatore()-postiOccupati);
+                    if(contatoreaggiornato == 0) {
                         postiDisponibili.remove(i);
                     }
                     else
                         {
-                            postiDisponibili.get(i).setContatore(contatore_aggiornato);}
+                            postiDisponibili.get(i).setContatore(contatoreaggiornato);}
 
                     break;
                 }

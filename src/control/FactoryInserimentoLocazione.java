@@ -1,5 +1,7 @@
 package control;
 
+import java.io.IOException;
+
 import entity.*;
 
 
@@ -42,14 +44,14 @@ public class FactoryInserimentoLocazione {
 
 
     //metodo che ritorna l'istanza (singleton) della factory
-    public synchronized static final FactoryInserimentoLocazione getFactoryInstance(){
+    public static synchronized final FactoryInserimentoLocazione getFactoryInstance(){
         if (FactoryInserimentoLocazione.instance == null)
             FactoryInserimentoLocazione.instance = new FactoryInserimentoLocazione();
         return instance;
     }
 
     // metodo che effettivamente crea il tipo di locazione richiesto ritornando puerò un oggetto di tipo Locazione
-    public Locazione createGenericLocation(String type) throws Exception {
+    public Locazione createGenericLocation(String type) throws IOException {
 
         switch (type){
             case "0": return new Albergo(nomeLocazione, postiTotali, provincia, indirizzo, userLocatore, prezzo, descrizione, parcheggio, wifi, pet, "", "", "", "");
@@ -57,7 +59,7 @@ public class FactoryInserimentoLocazione {
             case "2": return new Beb(nomeLocazione, postiTotali, provincia, indirizzo, userLocatore, prezzo, descrizione, parcheggio, wifi, pet, "");
             case "3": return new CasaVacanza(nomeLocazione, postiTotali, provincia, indirizzo, userLocatore, prezzo, descrizione, parcheggio, wifi, pet, "", "", false, "");
             case "4": return new Ostello(nomeLocazione, postiTotali, provincia, indirizzo, userLocatore, prezzo, descrizione, parcheggio, wifi, pet, "");
-            default: throw new Exception("Invalid type : " + type);
+            default: throw new IOException("Invalid type : " + type);
         }
 
 

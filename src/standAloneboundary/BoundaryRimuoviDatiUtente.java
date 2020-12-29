@@ -1,9 +1,9 @@
 package standAloneboundary;
 
 
-import standAlonecontrol.ControlloreLinguaAmministratore;
-import standAlonecontrol.ControlloreRimuoviDatiUtente;
-import standAloneutils.StampaStringhe;
+import standalonecontrol.ControlloreLinguaAmministratore;
+import standalonecontrol.ControlloreRimuoviDatiUtente;
+import standaloneutils.StampaStringhe;
 
 import javax.swing.*;
 import java.awt.*;

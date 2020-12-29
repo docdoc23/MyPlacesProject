@@ -1,4 +1,4 @@
-package controlControlloreGestioneLocazione;
+package controlcontrolloregestionelocazione;
 
 
 import control.FactoryInserimentoLocazione;
@@ -8,9 +8,12 @@ import exception.SerializzazioneException;
 import utils.DeserializzaOggetti;
 import utils.SerializzaOggetti;
 
+
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 
 
@@ -29,7 +32,7 @@ public class ControlloreInserimentoLocazione {
 
     //metodo che chiama la factory, ne cambia lo stato, e richiede la creazione della locazione oppurtuna passandogli command
     public Locazione inserisciLocazione(String nomeLocazione, String postiTotali, String provincia, String indirizzo, String userLocatore, String prezzo,
-                                        String descrizione, boolean parcheggio, boolean wifi, boolean pet) throws Exception {
+                                        String descrizione, boolean parcheggio, boolean wifi, boolean pet) throws IOException {
 
 
 
@@ -45,6 +48,7 @@ public class ControlloreInserimentoLocazione {
 
         path = locazione.selectPath();
         System.out.println(path);
+    
     }
 
     //metodo che serializza effettivamente la nuova locazione creata

@@ -1,4 +1,4 @@
-package controlabstractFactoryPrenotazione;
+package controlabstractfactoryprenotazione;
 
 
 public class FactoryPrenotazionePiuPosti extends FactoryPrenotazione {
@@ -11,7 +11,7 @@ public class FactoryPrenotazionePiuPosti extends FactoryPrenotazione {
     private static FactoryPrenotazionePiuPosti instance = null;
 
     //Metodo necessario per il singleton
-    public synchronized static final FactoryPrenotazionePiuPosti getFactoryPrenotazionePiuPosti(){
+    public static synchronized final FactoryPrenotazionePiuPosti getFactoryPrenotazionePiuPosti(){
         if(FactoryPrenotazionePiuPosti.instance==null)
             FactoryPrenotazionePiuPosti.instance = new FactoryPrenotazionePiuPosti();
         return instance;
@@ -26,7 +26,7 @@ public class FactoryPrenotazionePiuPosti extends FactoryPrenotazione {
 
 	@Override
 	public ControlloreDisponibilita creaControlloreDisponibilita() {
-		// TODO Auto-generated method stub
+		
 		return new ControlloreDisponibilitaPiuPosti();
 	}
 

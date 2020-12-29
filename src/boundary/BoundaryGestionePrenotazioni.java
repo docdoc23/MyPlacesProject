@@ -2,23 +2,23 @@ package boundary;
 
 import control.ControlloreRimuoviPrenotazione;
 import control.ControlloreVisualizzaPrenotazioni;
-import controlabstractFactoryPrenotazione.ControllorePrenotazione;
+import controlabstractfactoryprenotazione.ControllorePrenotazione;
 import entity.Locazione;
 import entity.Prenotazione;
 import exception.DeserializzazioneException;
 import exception.SerializzazioneException;
 
 import java.io.IOException;
-//import java.util.ArrayList;
+
 import java.util.List;
 
 
 public class BoundaryGestionePrenotazioni {
 
 
-    private ControllorePrenotazione cp;
+    //private ControllorePrenotazione cp;
     private ControlloreVisualizzaPrenotazioni cvp;
-    private ControlloreRimuoviPrenotazione crp;
+    //private ControlloreRimuoviPrenotazione crp;
 
     public BoundaryGestionePrenotazioni(){//default
 
@@ -27,7 +27,7 @@ public class BoundaryGestionePrenotazioni {
 
     public boolean effettuaPrenotazione(Locazione locazione, String cliente, String dataInizio, String dataFine, String numeroPersone) throws DeserializzazioneException, SerializzazioneException, IOException {
 
-        cp = new ControllorePrenotazione();
+        ControllorePrenotazione cp = new ControllorePrenotazione();
 
         return cp.controlloPrenotazione(locazione,cliente,dataInizio,dataFine,numeroPersone);
 
@@ -45,7 +45,7 @@ public class BoundaryGestionePrenotazioni {
     }
 
     public void avvioRimozione(Prenotazione prenotazione) throws DeserializzazioneException, SerializzazioneException, IOException {
-        crp = new ControlloreRimuoviPrenotazione();
+    	ControlloreRimuoviPrenotazione crp = new ControlloreRimuoviPrenotazione();
         crp.rimuovi(prenotazione);
     }
 }

@@ -1,4 +1,4 @@
-package controlDecorator;
+package controldecorator;
 
 
 //ConcreteDecorator 3
@@ -13,8 +13,10 @@ public class DecoratorPrezzoWifi extends DecoratorPrezzo {
     }
 
     protected int applyWifi(int input){
-        int output = input + this.prezzoWifi;
-        return output;
+        /*i-n-t output = input + this.prezzoWifi
+        return output*/
+        
+        return input + this.prezzoWifi;
     }
 
     @Override

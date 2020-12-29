@@ -1,4 +1,4 @@
-package standAlonecontrol;
+package standalonecontrol;
 
 import constants.Constants;
 

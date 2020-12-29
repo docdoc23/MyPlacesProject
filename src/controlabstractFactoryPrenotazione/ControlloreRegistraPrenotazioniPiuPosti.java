@@ -1,4 +1,4 @@
-package controlabstractFactoryPrenotazione;
+package controlabstractfactoryprenotazione;
 
 import constants.Constants;
 import entity.Prenotazione;

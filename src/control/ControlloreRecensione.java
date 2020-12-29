@@ -26,7 +26,7 @@ public class ControlloreRecensione {
     3) per indicare che prima di recensire una locazione è neccessaria almeno una prenotazione per quella locazione
     4) per indicare che il testo della recensione deve essere composto da almeno 10 caratteri
     5) per indicare che il testo della recensione non può essere composto da più di 300 caratteri
-    se non si verifica nessuno degli errori precedenti viene restituito 0;
+    se non si verifica nessuno degli errori precedenti viene restituito 0
      */
 
     public int  inserisci(String nomeLocazione,String tipoLocazione, String nomeRecensore, int numeroStelle, String testoRecensione) throws DeserializzazioneException, SerializzazioneException {
@@ -77,6 +77,8 @@ public class ControlloreRecensione {
             case "Ostello":
                 percorsoLocazioni = Constants.OSTELLI_PATH;
                 break;
+            default :
+            	break;
         }
 
         File file = new File(percorsoLocazioni);
@@ -112,6 +114,8 @@ public class ControlloreRecensione {
             case "Ostello":
                 percorsoPrenotazioni = Constants.PRENOTATI_OSTELLO_PATH;
                 break;
+            default :
+            	break;
         }
 
         File file = new File(percorsoPrenotazioni);

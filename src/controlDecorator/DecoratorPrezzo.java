@@ -1,4 +1,4 @@
-package controlDecorator;
+package controldecorator;
 
 
 //Decorator
@@ -12,7 +12,8 @@ public abstract class DecoratorPrezzo extends ComponentePrezzo {
 
     @Override
     public int calcolaPrezzo() {
-        int resultsFromRedirection = this.component.calcolaPrezzo();
-        return resultsFromRedirection;
+        /* i-n-t resultsFromRedirection = this.component.calcolaPrezzo()
+        return resultsFromRedirection*/
+        return this.component.calcolaPrezzo();
     }
 }

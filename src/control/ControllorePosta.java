@@ -9,7 +9,7 @@ import utils.DeserializzaOggetti;
 import utils.SerializzaOggetti;
 
 import java.io.File;
-import java.security.SecureRandom;
+
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -42,14 +42,15 @@ public class ControllorePosta {
             }
 
             Messaggio messaggio;
+            String Err = "errore";
 
             for (Messaggio anElencoMessaggi : elencoMessaggi)
                 if (anElencoMessaggi.getCodice() == codice)
                     return anElencoMessaggi;
 
-            messaggio = new Messaggio("errore", "errore",
-                    "errore", "errore",
-                    "errore", 0);
+            messaggio = new Messaggio(Err, Err,
+                    Err, Err,
+                    Err, 0);
             return messaggio;
 
     }
@@ -232,10 +233,10 @@ public class ControllorePosta {
                 .getCodice();*/
 
         Random r = new Random();
-        int n = r.nextInt(10000);
+        
         
         
 
-        return n;
+        return r.nextInt(10000);
     }
 }

@@ -3,7 +3,7 @@ package boundary;
 import control.ControllorePosta;
 import entity.Messaggio;
 
-//import java.util.ArrayList;
+
 import java.util.List;
 
 

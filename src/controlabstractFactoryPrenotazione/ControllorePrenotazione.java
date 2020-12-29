@@ -1,4 +1,4 @@
-package controlabstractFactoryPrenotazione;
+package controlabstractfactoryprenotazione;
 
 import entity.*;
 import exception.DeserializzazioneException;

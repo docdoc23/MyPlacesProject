@@ -1,8 +1,8 @@
 package standAloneboundary;
 
 import constants.Constants;
-import standAlonecontrol.ControlloreLinguaAmministratore;
-import standAlonecontrol.ControlloreLoginAmministratore;
+import standalonecontrol.ControlloreLinguaAmministratore;
+import standalonecontrol.ControlloreLoginAmministratore;
 
 import javax.swing.*;
 import java.awt.*;

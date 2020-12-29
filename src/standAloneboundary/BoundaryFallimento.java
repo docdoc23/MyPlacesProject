@@ -2,7 +2,7 @@ package standAloneboundary;
 
 import constants.Constants;
 import entity.Utente;
-import standAlonecontrol.ControlloreProfiloAmministratore;
+import standalonecontrol.ControlloreProfiloAmministratore;
 
 import javax.swing.*;
 import java.awt.*;

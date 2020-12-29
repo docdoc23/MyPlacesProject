@@ -1,8 +1,8 @@
-package standAlonecontrol;
+package standalonecontrol;
 
 import constants.Constants;
-import controlControlloreGestioneLocazione.ControlloreRimuoviLocazione;
-import controlControlloreGestioneLocazione.ControlloreVisualizzaLocazioni;
+import controlcontrolloregestionelocazione.ControlloreRimuoviLocazione;
+import controlcontrolloregestionelocazione.ControlloreVisualizzaLocazioni;
 import entity.Locazione;
 import entity.Prenotazione;
 import entity.Utente;

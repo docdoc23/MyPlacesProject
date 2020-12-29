@@ -1,7 +1,7 @@
-package standAlonecontrol;
+package standalonecontrol;
 
 import constants.Constants;
-import controlControlloreGestioneLocazione.ControlloreVisualizzaLocazioni;
+import controlcontrolloregestionelocazione.ControlloreVisualizzaLocazioni;
 import entity.Locazione;
 import entity.Utente;
 import exception.DeserializzazioneException;

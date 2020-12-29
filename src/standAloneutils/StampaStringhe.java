@@ -1,10 +1,10 @@
-package standAloneutils;
+package standaloneutils;
 
 import constants.Constants;
 import entity.Locazione;
 import entity.Utente;
 import exception.DeserializzazioneException;
-import standAlonecontrol.ControlloreLinguaAmministratore;
+import standalonecontrol.ControlloreLinguaAmministratore;
 import utils.DeserializzaOggetti;
 
 import javax.swing.*;

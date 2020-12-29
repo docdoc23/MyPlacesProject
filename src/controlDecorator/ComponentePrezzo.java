@@ -1,4 +1,4 @@
-package controlDecorator;
+package controldecorator;
 
 
 //Component

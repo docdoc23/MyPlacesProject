@@ -1,4 +1,4 @@
-package controlControlloreGestioneLocazione;
+package controlcontrolloregestionelocazione;
 
 import constants.Constants;
 import entity.*;

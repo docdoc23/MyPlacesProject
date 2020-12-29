@@ -13,14 +13,14 @@ public class ControlloreLogin {
 
 	private String username;
 	private String password;
-	private boolean logged_in;
+	private boolean loggedIn;
 
 
 	public ControlloreLogin() {
 
 		this.username = "";
 		this.password = "";
-		this.logged_in = false;
+		this.loggedIn = false;
 	}
 
 
@@ -44,7 +44,7 @@ public class ControlloreLogin {
             for (Utente anUtenti : utenti) {
                 if (anUtenti.getUsername().equals(username)) {
                     if (anUtenti.getPassword().equals(password)) {
-                        logged_in = true;
+                        loggedIn = true;
                         this.username = username;
                         this.password = password;
                     }
@@ -61,7 +61,7 @@ public class ControlloreLogin {
      * @return stato di autenticazione corrente
      */
 	public boolean getLogged(){
-		return this.logged_in;
+		return this.loggedIn;
 	}
 
     /**
@@ -70,7 +70,7 @@ public class ControlloreLogin {
 	public void logout(){
 		this.username = "";
 		this.password = "";
-		this.logged_in = false;
+		this.loggedIn = false;
 	}
 
     /**

@@ -101,7 +101,9 @@ public class AdapterRicercaPerLocazione implements ControlloreRicercaPerLocazion
     public Object ricercaAvanzata(String tipoLocazione,String provincia, String prezzo,int numeroGiorni, String sParchegio, String sWifi, String sPet ,String caratteristica) throws ClassNotFoundException,
             InstantiationException, IllegalAccessException, DeserializzazioneException, IOException, SerializzazioneException, InterruptedException {
 
-        Boolean parcheggio=false, wifi =false, pet=false;
+        Boolean parcheggio=false; 
+        Boolean wifi =false;
+        Boolean pet=false;
 
         if (sParchegio.equals("true")) {
             parcheggio = true;

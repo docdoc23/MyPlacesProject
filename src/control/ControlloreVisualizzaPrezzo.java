@@ -1,6 +1,6 @@
 package control;
 
-import controlDecorator.*;
+import controldecorator.*;
 import entity.Locazione;
 
 /**
@@ -13,7 +13,7 @@ public class ControlloreVisualizzaPrezzo {
     private PrezzoBase prezzoBase;
     private ComponentePrezzo component; //oggetto necessario per applicare le varie decorazioni
 
-    public ControlloreVisualizzaPrezzo(){
+    public ControlloreVisualizzaPrezzo(){//default
 
     }
 
@@ -36,21 +36,21 @@ public class ControlloreVisualizzaPrezzo {
     // metodo che applica opportunamente le decorazioni richieste
    public void applicaServizi(int numeroGiorni, boolean parcheggio, boolean wifi, boolean pet){
 
-       int prezzo_aggiuntivo = 0;
+       int prezzoaggiuntivo = 0;
 
        if(parcheggio) {
-           prezzo_aggiuntivo = 8*numeroGiorni;
-           DecoratorPrezzoParcheggio dparc = new DecoratorPrezzoParcheggio(this.component, prezzo_aggiuntivo);
+           prezzoaggiuntivo = 8*numeroGiorni;
+           DecoratorPrezzoParcheggio dparc = new DecoratorPrezzoParcheggio(this.component, prezzoaggiuntivo);
            this.component=dparc;
        }
        if(wifi) {
-           prezzo_aggiuntivo = 4*numeroGiorni;
-           DecoratorPrezzoWifi dwif = new DecoratorPrezzoWifi(this.component, prezzo_aggiuntivo);
+           prezzoaggiuntivo = 4*numeroGiorni;
+           DecoratorPrezzoWifi dwif = new DecoratorPrezzoWifi(this.component, prezzoaggiuntivo);
            this.component=dwif;
        }
        if(pet) {
-           prezzo_aggiuntivo = 12*numeroGiorni;
-           DecoratorPrezzoPet dpet= new DecoratorPrezzoPet(this.component, prezzo_aggiuntivo);
+           prezzoaggiuntivo = 12*numeroGiorni;
+           DecoratorPrezzoPet dpet= new DecoratorPrezzoPet(this.component, prezzoaggiuntivo);
            this.component=dpet;
        }
 

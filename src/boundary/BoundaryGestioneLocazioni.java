@@ -1,14 +1,16 @@
 package boundary;
 
-import controlControlloreGestioneLocazione.ControlloreInserimentoLocazione;
-import controlControlloreGestioneLocazione.ControlloreRimuoviLocazione;
-import controlControlloreGestioneLocazione.ControlloreVisualizzaLocazioni;
 import entity.*;
 import exception.DeserializzazioneException;
 import exception.SerializzazioneException;
 
-import java.util.ArrayList;
+
+import java.io.IOException;
 import java.util.List;
+
+import controlcontrolloregestionelocazione.ControlloreInserimentoLocazione;
+import controlcontrolloregestionelocazione.ControlloreRimuoviLocazione;
+import controlcontrolloregestionelocazione.ControlloreVisualizzaLocazioni;
 
 
 public class BoundaryGestioneLocazioni {
@@ -119,7 +121,7 @@ public class BoundaryGestioneLocazioni {
 
     }
 
-    public Locazione chiamaControlloreInserimento() throws Exception {
+    public Locazione chiamaControlloreInserimento() throws IOException {
 
         cil= new ControlloreInserimentoLocazione(command);
         return cil.inserisciLocazione(nomeLocazione, postiTotali, provincia, indirizzo, userLocatore, prezzo, descrizione, Boolean.valueOf(parcheggio), Boolean.valueOf(wifi), Boolean.valueOf(pet));

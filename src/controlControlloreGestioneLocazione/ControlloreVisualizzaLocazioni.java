@@ -1,4 +1,4 @@
-package controlControlloreGestioneLocazione;
+package controlcontrolloregestionelocazione;
 
 import constants.Constants;
 import entity.Locazione;
@@ -19,7 +19,7 @@ public class ControlloreVisualizzaLocazioni {
     private String percorsoOstello = Constants.OSTELLI_PATH;
 
 
-    public ControlloreVisualizzaLocazioni(){
+    public ControlloreVisualizzaLocazioni(){//default
 
     }
 

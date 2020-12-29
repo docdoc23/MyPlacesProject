@@ -9,6 +9,7 @@ import utils.SerializzaOggetti;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 
@@ -31,10 +32,10 @@ public class ControlloreAiuto {
         DeserializzaOggetti dobj = new DeserializzaOggetti();
 
 
-        ArrayList<String> domandeList = new ArrayList<String>();
+        ArrayList<String> domandeList = new ArrayList<>();
 
         if(file.length()==0) {
-            return null;
+        	return Collections.emptyList();
         }
 
         this.domArray =(ArrayList<DomandaUtente>) dobj.deserializza(percorso);
@@ -45,8 +46,8 @@ public class ControlloreAiuto {
                 domandeList.add(domanda);
             }
         }
-        if(domandeList.size()==0)
-            return null;
+        if(domandeList.isEmpty())
+            return Collections.emptyList();
         return domandeList;
     }
 

@@ -1,9 +1,10 @@
 
 package standAloneboundary;
 
-import standAlonecontrol.ControlloreLinguaAmministratore;
-
 import javax.swing.*;
+
+import standalonecontrol.ControlloreLinguaAmministratore;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

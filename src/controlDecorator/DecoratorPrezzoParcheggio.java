@@ -1,4 +1,4 @@
-package controlDecorator;
+package controldecorator;
 
 
 //ConcreteDecorator 1
@@ -13,8 +13,10 @@ public class DecoratorPrezzoParcheggio extends DecoratorPrezzo {
     }
 
     protected int applyParcheggio(int input){
-        int output = input + this.prezzoParcheggio;
-        return output;
+        /*i-n-t output = input + this.prezzoParcheggio
+        return output*/
+        
+        return input + this.prezzoParcheggio;
     }
 
     @Override
