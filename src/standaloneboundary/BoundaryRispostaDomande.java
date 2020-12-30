@@ -63,24 +63,24 @@ public class BoundaryRispostaDomande {
             //pannello esterno che contiene tutto
             pannelloFaqRisposta = new JPanel();
 
-            pannelloFaqRisposta.setSize(BoundaryAvvio.Confine.getWidth(), BoundaryAvvio.Confine.getHeight());
-            BoundaryAvvio.Confine.add(pannelloFaqRisposta);
+            pannelloFaqRisposta.setSize(BoundaryAvvio.getConfine().getWidth(), BoundaryAvvio.getConfine().getHeight());
+            BoundaryAvvio.getConfine().add(pannelloFaqRisposta);
             pannelloFaqRisposta.setLayout(null);
 
             panelBox.setLayout(new FlowLayout());
-            panelBox.setSize(BoundaryAvvio.Confine.getWidth(), BoundaryAvvio.Confine.getHeight()/5);
+            panelBox.setSize(BoundaryAvvio.getConfine().getWidth(), BoundaryAvvio.getConfine().getHeight()/5);
             panelBox.setLocation(5, 50);
 
             this.costrusciComboBox();
 
             panelEtichetta.setLayout(null);
-            panelEtichetta.setSize(BoundaryAvvio.Confine.getWidth(), BoundaryAvvio.Confine.getHeight()/10);
+            panelEtichetta.setSize(BoundaryAvvio.getConfine().getWidth(), BoundaryAvvio.getConfine().getHeight()/10);
             panelEtichetta.setLocation(5, 280);
             panelEtichetta.add(rispondiLabel);
 
 
             panelTitolo.setLayout(null);
-            panelTitolo.setSize(BoundaryAvvio.Confine.getWidth(), 45);
+            panelTitolo.setSize(BoundaryAvvio.getConfine().getWidth(), 45);
             panelTitolo.setLocation(5, 5);
             panelTitolo.add(titolo);
 
@@ -115,7 +115,7 @@ public class BoundaryRispostaDomande {
             bIndietro.setToolTipText(bundle.getString("boundaryAmministrazione_schermata_prec"));
 
             panelRisposta.setLayout(new BorderLayout());
-            panelRisposta.setSize(BoundaryAvvio.Confine.getWidth()*5/6, BoundaryAvvio.Confine.getHeight()/6);
+            panelRisposta.setSize(BoundaryAvvio.getConfine().getWidth()*5/6, BoundaryAvvio.getConfine().getHeight()/6);
             panelRisposta.setLocation(80, 350);
             panelRisposta.setBackground(new Color(190, 190, 190));
 
@@ -128,7 +128,7 @@ public class BoundaryRispostaDomande {
 
 
             panelButtons.setLayout(null);
-            panelButtons.setSize(BoundaryAvvio.Confine.getWidth(), BoundaryAvvio.Confine.getHeight()/5);
+            panelButtons.setSize(BoundaryAvvio.getConfine().getWidth(), BoundaryAvvio.getConfine().getHeight()/5);
             panelButtons.setLocation(5, 420);
             panelButtons.add(bRispondi);
             panelButtons.add(bIndietro);

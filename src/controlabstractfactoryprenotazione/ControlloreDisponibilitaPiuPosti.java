@@ -15,12 +15,11 @@ import java.util.GregorianCalendar;
 import java.util.List;
 
 
-public class ControlloreDisponibilitaPiuPosti extends ControlloreDisponibilita{
+public class ControlloreDisponibilitaPiuPosti implements ControlloreDisponibilita{
 
     private static String percorsoPrenotazioniAlberghi = Constants.PRENOTAZIONE_ALBERGO_PATH;
     private static String percorsoPrenotazioniBeb = Constants.PRENOTAZIONE_BEB_PATH;
     private static String percorsoPrenotazioniOstelli = Constants.PRENOTAZIONE_OSTELLO_PATH;
-
 
     @Override
     public boolean controllo(Locazione loc, GregorianCalendar gcInizio, GregorianCalendar gcFine, String numeroPersone) throws DeserializzazioneException, SerializzazioneException, IOException {

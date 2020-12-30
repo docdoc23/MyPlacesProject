@@ -111,13 +111,13 @@ public class BoundaryProfilo {
         // Inizializzazione
         // Composizione Wrapper
         int border = 5;
-        this.pannelloWrapper.setSize(BoundaryAvvio.Confine
-                .getWidth(), BoundaryAvvio.Confine.getHeight());
-        BoundaryAvvio.Confine.add(pannelloWrapper);
+        this.pannelloWrapper.setSize(BoundaryAvvio.getConfine()
+                .getWidth(), BoundaryAvvio.getConfine().getHeight());
+        BoundaryAvvio.getConfine().add(pannelloWrapper);
         this.pannelloWrapper.setLayout(null);
 
         this.panelTitolo.setLayout(null);
-        this.panelTitolo.setSize(BoundaryAvvio.Confine
+        this.panelTitolo.setSize(BoundaryAvvio.getConfine()
                 .getWidth(), 45);
         this.panelTitolo.setLocation(border, border);
         this.panelTitolo.add(this.titolo);
@@ -132,7 +132,7 @@ public class BoundaryProfilo {
 
         // Composizione pannello username
         this.panelUsername.setLayout(null);
-        this.panelUsername.setSize(BoundaryAvvio.Confine.getWidth(), BoundaryAvvio.Confine.getHeight()/10);
+        this.panelUsername.setSize(BoundaryAvvio.getConfine().getWidth(), BoundaryAvvio.getConfine().getHeight()/10);
         this.panelUsername.setLocation(5, 60);
         this.panelUsername.setBackground(new Color(190, 190, 190));
         this.panelUsername.add(usernameLabel);
@@ -150,7 +150,7 @@ public class BoundaryProfilo {
 
         // Composizione pannello vecchia password
         this.panelOldPassword.setLayout(null);
-        this.panelOldPassword.setSize(BoundaryAvvio.Confine.getWidth(), BoundaryAvvio.Confine.getHeight()/10);
+        this.panelOldPassword.setSize(BoundaryAvvio.getConfine().getWidth(), BoundaryAvvio.getConfine().getHeight()/10);
         this.panelOldPassword.setLocation(5, 125);
         this.panelOldPassword.setBackground(new Color(190, 190, 190));
         this.panelOldPassword.add(oldPasswordLabel);
@@ -167,7 +167,7 @@ public class BoundaryProfilo {
 
         // Composizione pannello nuova password
         this.panelNewPassword.setLayout(null);
-        this.panelNewPassword.setSize(BoundaryAvvio.Confine.getWidth(), BoundaryAvvio.Confine.getHeight()/10);
+        this.panelNewPassword.setSize(BoundaryAvvio.getConfine().getWidth(), BoundaryAvvio.getConfine().getHeight()/10);
         this.panelNewPassword.setLocation(5, 190);
         this.panelNewPassword.setBackground(new Color(190, 190, 190));
         this.panelNewPassword.add(newPasswordLabel);
@@ -184,7 +184,7 @@ public class BoundaryProfilo {
 
         // Composizione pannello email
         this.panelEmail.setLayout(null);
-        this.panelEmail.setSize(BoundaryAvvio.Confine.getWidth(), BoundaryAvvio.Confine.getHeight()/10);
+        this.panelEmail.setSize(BoundaryAvvio.getConfine().getWidth(), BoundaryAvvio.getConfine().getHeight()/10);
         this.panelEmail.setLocation(5, 255);
         this.panelEmail.setBackground(new Color(190, 190, 190));
         this.panelEmail.add(emailLabel);
@@ -201,7 +201,7 @@ public class BoundaryProfilo {
 
         // Composizione pannello risultato operazione
         this.panelResultOp.setLayout(null);
-        this.panelResultOp.setSize(BoundaryAvvio.Confine.getWidth(), BoundaryAvvio.Confine.getHeight()/10);
+        this.panelResultOp.setSize(BoundaryAvvio.getConfine().getWidth(), BoundaryAvvio.getConfine().getHeight()/10);
         this.panelResultOp.setLocation(5, 400);
         this.panelResultOp.add(resultLabel);
 
@@ -212,7 +212,7 @@ public class BoundaryProfilo {
 
         // Composizione box selettore lingua
         this.panelBox.setLayout(new FlowLayout());
-        this.panelBox.setSize(BoundaryAvvio.Confine.getWidth(), BoundaryAvvio.Confine.getHeight()/12);
+        this.panelBox.setSize(BoundaryAvvio.getConfine().getWidth(), BoundaryAvvio.getConfine().getHeight()/12);
         this.panelBox.setLocation(5, 350);
         this.panelBox.add(boxLabel);
         this.panelBox.add(box);
@@ -224,8 +224,8 @@ public class BoundaryProfilo {
 
         // Composizione button
         this.panelButtonSelect.setLayout(null);
-        this.panelButtonSelect.setSize(BoundaryAvvio.Confine.getWidth(),
-                BoundaryAvvio.Confine.getHeight()/5);
+        this.panelButtonSelect.setSize(BoundaryAvvio.getConfine().getWidth(),
+                BoundaryAvvio.getConfine().getHeight()/5);
         this.panelButtonSelect.setLocation(5, 430);
         this.panelButtonSelect.add(bSalva);
         this.panelButtonSelect.add(bIndietro);

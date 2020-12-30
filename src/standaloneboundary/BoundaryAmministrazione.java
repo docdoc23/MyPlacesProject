@@ -13,19 +13,19 @@ import java.util.ResourceBundle;
 public class BoundaryAmministrazione {
 	
 	// Pannelli
-	public JPanel pannelloAmministrazione;	
-	public JPanel panelTitolo = new JPanel();
-	public JPanel panelButton = new JPanel();
+	private JPanel pannelloAmministrazione;	
+	private JPanel panelTitolo = new JPanel();
+	private JPanel panelButton = new JPanel();
 	
 	// Label
-	public JLabel titolo = new JLabel();
+	private JLabel titolo = new JLabel();
 	
 	//Bottoni
-	public JButton bRimuovi;
-	public JButton bNomina;
-	public JButton bIndietro;
-	public JButton bRisposta;
-	public JButton bProfilo;
+	private JButton bRimuovi;
+	private JButton bNomina;
+	private JButton bIndietro;
+	private JButton bRisposta;
+	private JButton bProfilo;
 	
 	// Ascoltatore di bottone e relativa azioni
 	private RimuoviAA ascoltatoreEtAzioneRimuovi;
@@ -46,12 +46,12 @@ public class BoundaryAmministrazione {
 		
 		pannelloAmministrazione = new JPanel();
 		
-		pannelloAmministrazione.setSize(BoundaryAvvio.Confine.getWidth(), BoundaryAvvio.Confine.getHeight());
-		BoundaryAvvio.Confine.add(pannelloAmministrazione);
+		pannelloAmministrazione.setSize(BoundaryAvvio.getConfine().getWidth(), BoundaryAvvio.getConfine().getHeight());
+		BoundaryAvvio.getConfine().add(pannelloAmministrazione);
 		pannelloAmministrazione.setLayout(null);
 		
         panelTitolo.setLayout(null);
-        panelTitolo.setSize(BoundaryAvvio.Confine.getWidth(), 45);
+        panelTitolo.setSize(BoundaryAvvio.getConfine().getWidth(), 45);
         panelTitolo.setLocation(5, 5);  
         panelTitolo.add(titolo);
         
@@ -65,7 +65,7 @@ public class BoundaryAmministrazione {
         pannelloAmministrazione.add(panelTitolo);	
         
 		panelButton.setLayout(null);
-		panelButton.setSize(BoundaryAvvio.Confine.getWidth(),500);
+		panelButton.setSize(BoundaryAvvio.getConfine().getWidth(),500);
 		panelButton.setLocation(5, 30); 
 		
 		bRimuovi = new JButton(bundle.getString("boundaryAmministrazione_rimuovi"));

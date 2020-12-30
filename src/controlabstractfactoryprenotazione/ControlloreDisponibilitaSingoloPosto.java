@@ -18,7 +18,7 @@ import java.util.GregorianCalendar;
 import java.util.List;
 
 
-public class ControlloreDisponibilitaSingoloPosto extends ControlloreDisponibilita{
+public class ControlloreDisponibilitaSingoloPosto implements ControlloreDisponibilita{
 
     private static String percorsoPrenotazioniAppartamenti = Constants.PRENOTAZIONE_APPARTAMENTO_PATH;
     private static String percorsoPrenotazioniCaseVacanza = Constants.PRENOTAZIONE_CASAVACANZA_PATH;

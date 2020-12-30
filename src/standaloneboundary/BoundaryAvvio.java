@@ -16,21 +16,21 @@ public class BoundaryAvvio extends StackFrame
     private static final long	serialVersionUID	= 1L;
 
     //Pannelli
-    public static JPanel pannello;
-    public JPanel panelTitolo;
-    public JPanel panelButtons;
+    private JPanel pannello;
+    private JPanel panelTitolo;
+    private JPanel panelButtons;
 
     //Label
-    public JLabel titolo;
+    private JLabel titolo;
 
     //Bottoni
-    public JButton bEntra;
+    private JButton bEntra;
 
     //Ascoltatori di bottoni e relative azioni
     private EntraAA	ascoltatoreEtAzioneEntra;
 
     //JFrame
-    public static JFrame Confine;
+    private static JFrame confine;
 
     // Box lingua
     private ControlloreLinguaAmministratore cl;
@@ -48,10 +48,10 @@ public class BoundaryAvvio extends StackFrame
 
         this.bEntra = new JButton(bundle.getString("boundaryAvvio_entra"));
 
-        Confine = this;
+        setConfine(this);
         this.setTitle(bundle.getString("boundaryAvvio_paginaAmm"));
 
-        Confine.setLayout(null);
+        getConfine().setLayout(null);
         final int BASECONFINE = 900;
         final int ALTEZZACONFINE = 600;
         setSize(BASECONFINE, ALTEZZACONFINE);
@@ -60,7 +60,7 @@ public class BoundaryAvvio extends StackFrame
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
-        pannello.setSize(Confine.getWidth(), Confine.getHeight());
+        pannello.setSize(getConfine().getWidth(), getConfine().getHeight());
         this.add(pannello);
         pannello.setLayout(null);
 
@@ -109,7 +109,15 @@ public class BoundaryAvvio extends StackFrame
 
     // Ascoltatore
 
-    private class EntraAA implements ActionListener
+    public static JFrame getConfine() {
+		return confine;
+	}
+
+	public void setConfine(JFrame confine) {
+		BoundaryAvvio.confine = confine;
+	}
+
+	private class EntraAA implements ActionListener
     {
         public void actionPerformed(ActionEvent arg0)
         {

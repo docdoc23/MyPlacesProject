@@ -4,6 +4,7 @@ import javax.swing.*;
 
 import standalonecontrol.ControlloreCreaAmministratore;
 import standalonecontrol.ControlloreLinguaAmministratore;
+import standaloneboundary.BoundaryAvvio;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -47,14 +48,14 @@ public class BoundaryCreaAmministratore {
 		int border = 5;
 
 		pannelloCreazione = new JPanel();
-
-		pannelloCreazione.setSize(BoundaryAvvio.Confine.getWidth(), BoundaryAvvio.Confine.getHeight());
-		BoundaryAvvio.Confine.add(pannelloCreazione);
+		pannelloCreazione.setSize(BoundaryAvvio.getConfine().getWidth(), BoundaryAvvio.getConfine().getHeight());
+		BoundaryAvvio.getConfine().add(pannelloCreazione);
 		pannelloCreazione.setLayout(null);
 
 
+		
 		panelTitolo.setLayout(null);
-		panelTitolo.setSize(BoundaryAvvio.Confine.getWidth(), 45);
+		panelTitolo.setSize(BoundaryAvvio.getConfine().getWidth(), 45);
 		panelTitolo.setLocation(5, 5);
 		panelTitolo.add(titolo);
 
@@ -104,22 +105,27 @@ public class BoundaryCreaAmministratore {
 		bIndietro.setFont(new Font("Arial", 0, 20));
 		bIndietro.setToolTipText(bundle.getString("boundaryAmministrazione_schermata_prec"));
 
+
 		panelUsername.setLayout(null);
-		panelUsername.setSize(BoundaryAvvio.Confine.getWidth(), BoundaryAvvio.Confine.getHeight()/5);
+		panelUsername.setSize(BoundaryAvvio.getConfine().getWidth(), BoundaryAvvio.getConfine().getHeight()/5);
+		
 		panelUsername.setLocation(5, 70);
 		panelUsername.setBackground(new Color(190, 190, 190));
 		panelUsername.add(usernameLabel);
 		panelUsername.add(usernameF);
 
+
 		panelPassword.setLayout(null);
-		panelPassword.setSize(BoundaryAvvio.Confine.getWidth(), BoundaryAvvio.Confine.getHeight()/5);
+		panelPassword.setSize(BoundaryAvvio.getConfine().getWidth(), BoundaryAvvio.getConfine().getHeight()/5);
+		
 		panelPassword.setLocation(5, 200);
 		panelPassword.setBackground(new Color(190, 190, 190));
 		panelPassword.add(passwordLabel);
 		panelPassword.add(passwordF);
+		
 
 		panelButtonCrea.setLayout(null);
-		panelButtonCrea.setSize(BoundaryAvvio.Confine.getWidth(), BoundaryAvvio.Confine.getHeight()/5);
+		panelButtonCrea.setSize(BoundaryAvvio.getConfine().getWidth(), BoundaryAvvio.getConfine().getHeight()/5);
 		panelButtonCrea.setLocation(5, 430);
 
 		panelButtonCrea.add(bNomina);

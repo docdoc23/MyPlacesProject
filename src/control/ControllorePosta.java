@@ -42,15 +42,15 @@ public class ControllorePosta {
             }
 
             Messaggio messaggio;
-            String Err = "errore";
+            String err = "errore";
 
             for (Messaggio anElencoMessaggi : elencoMessaggi)
                 if (anElencoMessaggi.getCodice() == codice)
                     return anElencoMessaggi;
 
-            messaggio = new Messaggio(Err, Err,
-                    Err, Err,
-                    Err, 0);
+            messaggio = new Messaggio(err, err,
+                    err, err,
+                    err, 0);
             return messaggio;
 
     }

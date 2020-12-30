@@ -43,12 +43,12 @@ public class BoundaryGestioneUtenti {
 
         pannelloAmministrazione = new JPanel();
 
-        pannelloAmministrazione.setSize(BoundaryAvvio.Confine.getWidth(), BoundaryAvvio.Confine.getHeight());
-        BoundaryAvvio.Confine.add(pannelloAmministrazione);
+        pannelloAmministrazione.setSize(BoundaryAvvio.getConfine().getWidth(), BoundaryAvvio.getConfine().getHeight());
+        BoundaryAvvio.getConfine().add(pannelloAmministrazione);
         pannelloAmministrazione.setLayout(null);
 
         panelTitolo.setLayout(null);
-        panelTitolo.setSize(BoundaryAvvio.Confine.getWidth(), 45);
+        panelTitolo.setSize(BoundaryAvvio.getConfine().getWidth(), 45);
         panelTitolo.setLocation(5, 5);
         panelTitolo.add(titolo);
 
@@ -62,7 +62,7 @@ public class BoundaryGestioneUtenti {
         pannelloAmministrazione.add(panelTitolo);
 
         panelButton.setLayout(null);
-        panelButton.setSize(BoundaryAvvio.Confine.getWidth(),400);
+        panelButton.setSize(BoundaryAvvio.getConfine().getWidth(),400);
         panelButton.setLocation(5, 30);
 
         bRimuovi = new JButton(bundle.getString("boundaryGestioneUtenti_rimuovi_utente"));

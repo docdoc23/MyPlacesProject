@@ -41,12 +41,12 @@ private static final long	serialVersionUID	= 1L;
 		
 		pannelloLoginErrato = new JPanel();
 		
-		pannelloLoginErrato.setSize(BoundaryAvvio.Confine.getWidth(), BoundaryAvvio.Confine.getHeight());
-		BoundaryAvvio.Confine.add(pannelloLoginErrato);
+		pannelloLoginErrato.setSize(BoundaryAvvio.getConfine().getWidth(), BoundaryAvvio.getConfine().getHeight());
+		BoundaryAvvio.getConfine().add(pannelloLoginErrato);
 		pannelloLoginErrato.setLayout(null);
 		
         panelTitolo.setLayout(null);
-        panelTitolo.setSize(BoundaryAvvio.Confine.getWidth(), 45);
+        panelTitolo.setSize(BoundaryAvvio.getConfine().getWidth(), 45);
         panelTitolo.setLocation(5, 5);  
         panelTitolo.add(titolo);
         
@@ -60,7 +60,7 @@ private static final long	serialVersionUID	= 1L;
         pannelloLoginErrato.add(panelTitolo);	
         
 		panelButtonIndietro.setLayout(null);
-		panelButtonIndietro.setSize(BoundaryAvvio.Confine.getWidth(), 150);
+		panelButtonIndietro.setSize(BoundaryAvvio.getConfine().getWidth(), 150);
 		panelButtonIndietro.setLocation(5, 30); 
 		
 		

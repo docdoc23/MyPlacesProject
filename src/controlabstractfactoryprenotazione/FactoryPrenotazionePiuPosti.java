@@ -1,7 +1,7 @@
 package controlabstractfactoryprenotazione;
 
 
-public class FactoryPrenotazionePiuPosti extends FactoryPrenotazione {
+public class FactoryPrenotazionePiuPosti implements FactoryPrenotazione {
 
 
     private FactoryPrenotazionePiuPosti(){//default
@@ -11,7 +11,7 @@ public class FactoryPrenotazionePiuPosti extends FactoryPrenotazione {
     private static FactoryPrenotazionePiuPosti instance = null;
 
     //Metodo necessario per il singleton
-    public static synchronized final FactoryPrenotazionePiuPosti getFactoryPrenotazionePiuPosti(){
+    public static final synchronized  FactoryPrenotazionePiuPosti getFactoryPrenotazionePiuPosti(){
         if(FactoryPrenotazionePiuPosti.instance==null)
             FactoryPrenotazionePiuPosti.instance = new FactoryPrenotazionePiuPosti();
         return instance;

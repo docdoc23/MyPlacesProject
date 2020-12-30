@@ -16,9 +16,9 @@ import java.util.List;
 public class BoundaryGestionePrenotazioni {
 
 
-    //private ControllorePrenotazione cp;
+    
     private ControlloreVisualizzaPrenotazioni cvp;
-    //private ControlloreRimuoviPrenotazione crp;
+    
 
     public BoundaryGestionePrenotazioni(){//default
 

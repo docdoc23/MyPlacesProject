@@ -2,11 +2,11 @@ package controldecorator;
 
 
 //Decorator
-public abstract class DecoratorPrezzo extends ComponentePrezzo {
+public abstract class DecoratorPrezzo implements ComponentePrezzo {
 
     private ComponentePrezzo component;
 
-    public DecoratorPrezzo(ComponentePrezzo component){
+    protected DecoratorPrezzo(ComponentePrezzo component){
         this.component = component;
     }
 

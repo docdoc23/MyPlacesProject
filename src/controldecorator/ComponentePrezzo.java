@@ -2,6 +2,6 @@ package controldecorator;
 
 
 //Component
-public abstract class ComponentePrezzo {
+public /*abstract class*/interface ComponentePrezzo {
     public abstract int calcolaPrezzo();
 }

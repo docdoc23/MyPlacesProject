@@ -57,12 +57,12 @@ public class BoundaryRimuoviDatiUtente {
 
         pannelloRimuoviDati = new JPanel();
 
-        pannelloRimuoviDati.setSize(BoundaryAvvio.Confine.getWidth(), BoundaryAvvio.Confine.getHeight());
-        BoundaryAvvio.Confine.add(pannelloRimuoviDati);
+        pannelloRimuoviDati.setSize(BoundaryAvvio.getConfine().getWidth(), BoundaryAvvio.getConfine().getHeight());
+        BoundaryAvvio.getConfine().add(pannelloRimuoviDati);
         pannelloRimuoviDati.setLayout(null);
 
         panelTextArea.setLayout(new BorderLayout());
-        panelTextArea.setSize(BoundaryAvvio.Confine.getWidth()*8/9, BoundaryAvvio.Confine.getHeight()/6);
+        panelTextArea.setSize(BoundaryAvvio.getConfine().getWidth()*8/9, BoundaryAvvio.getConfine().getHeight()/6);
         panelTextArea.setLocation(50, 50);
 
         utenti_lista.setEditable(false);
@@ -72,7 +72,7 @@ public class BoundaryRimuoviDatiUtente {
 
 
         panelTitolo.setLayout(null);
-        panelTitolo.setSize(BoundaryAvvio.Confine.getWidth(), 45);
+        panelTitolo.setSize(BoundaryAvvio.getConfine().getWidth(), 45);
         panelTitolo.setLocation(5, 5);
         panelTitolo.add(titolo);
 
@@ -117,19 +117,19 @@ public class BoundaryRimuoviDatiUtente {
         bIndietro.setToolTipText(bundle.getString("boundaryAmministrazione_schermata_prec"));
 
         panelUser.setLayout(null);
-        panelUser.setSize(BoundaryAvvio.Confine.getWidth()*90/91, BoundaryAvvio.Confine.getHeight()/5);
+        panelUser.setSize(BoundaryAvvio.getConfine().getWidth()*90/91, BoundaryAvvio.getConfine().getHeight()/5);
         panelUser.setLocation(5, 300);
         panelUser.setBackground(new Color(190, 190, 190));
         panelUser.add(rimuoviLabel);
         panelUser.add(rimuoviF);
 
         panelVisualButton.setLayout(null);
-        panelVisualButton.setSize(BoundaryAvvio.Confine.getWidth(), BoundaryAvvio.Confine.getHeight()/6);
+        panelVisualButton.setSize(BoundaryAvvio.getConfine().getWidth(), BoundaryAvvio.getConfine().getHeight()/6);
         panelVisualButton.setLocation(5, 190);
         panelVisualButton.add(bVisualizza);
 
         panelButton.setLayout(null);
-        panelButton.setSize(BoundaryAvvio.Confine.getWidth(), BoundaryAvvio.Confine.getHeight()/8);
+        panelButton.setSize(BoundaryAvvio.getConfine().getWidth(), BoundaryAvvio.getConfine().getHeight()/8);
         panelButton.setLocation(5, 480);
         panelButton.add(bRimuovi);
 

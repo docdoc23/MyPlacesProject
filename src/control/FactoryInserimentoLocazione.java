@@ -44,7 +44,7 @@ public class FactoryInserimentoLocazione {
 
 
     //metodo che ritorna l'istanza (singleton) della factory
-    public static synchronized final FactoryInserimentoLocazione getFactoryInstance(){
+    public static final synchronized  FactoryInserimentoLocazione getFactoryInstance(){
         if (FactoryInserimentoLocazione.instance == null)
             FactoryInserimentoLocazione.instance = new FactoryInserimentoLocazione();
         return instance;

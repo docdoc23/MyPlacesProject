@@ -38,10 +38,13 @@ public class Locazione implements Serializable {
 	public int calcolaPrezzoBase(Locazione locazione,int numeroGiorni, String tipoPensione){
 		return numeroGiorni * (Integer.parseInt(this.getPrezzo().trim()));
 	}
+	
+	String path = "";
 
 	public String selectPath()
 	{
-		return "";
+		return path;
+		
 	}
 	// Getters e Setters
 	public String getNomeLocazione() {

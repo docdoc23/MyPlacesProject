@@ -60,14 +60,14 @@ public class BoundaryLogin extends JFrame
 
         pannelloLogin = new JPanel();
 
-        pannelloLogin.setSize(BoundaryAvvio.Confine.getWidth(),
-                BoundaryAvvio.Confine.getHeight());
-        BoundaryAvvio.Confine.add(pannelloLogin);
+        pannelloLogin.setSize(BoundaryAvvio.getConfine().getWidth(),
+                BoundaryAvvio.getConfine().getHeight());
+        BoundaryAvvio.getConfine().add(pannelloLogin);
         pannelloLogin.setLayout(null);
 
 
         panelTitolo.setLayout(null);
-        panelTitolo.setSize(BoundaryAvvio.Confine.getWidth(), 45);
+        panelTitolo.setSize(BoundaryAvvio.getConfine().getWidth(), 45);
         panelTitolo.setLocation(5, 5);
         panelTitolo.add(titolo);
 
@@ -80,7 +80,7 @@ public class BoundaryLogin extends JFrame
 
         // Composizione box selettore lingua
         this.panelBox.setLayout(new FlowLayout());
-        this.panelBox.setSize(BoundaryAvvio.Confine.getWidth(), BoundaryAvvio.Confine.getHeight()/12);
+        this.panelBox.setSize(BoundaryAvvio.getConfine().getWidth(), BoundaryAvvio.getConfine().getHeight()/12);
         this.panelBox.setLocation(0, 480);
         this.panelBox.add(boxLabel);
         this.panelBox.add(box);
@@ -122,21 +122,21 @@ public class BoundaryLogin extends JFrame
         bLogin.setFont(new Font("Arial", 0, 20));
 
         panelCredenzialiLogin.setLayout(null);
-        panelCredenzialiLogin.setSize(BoundaryAvvio.Confine.getWidth(), BoundaryAvvio.Confine.getHeight()/5);
+        panelCredenzialiLogin.setSize(BoundaryAvvio.getConfine().getWidth(), BoundaryAvvio.getConfine().getHeight()/5);
         panelCredenzialiLogin.setLocation(5, 70);
         panelCredenzialiLogin.setBackground(new Color(190, 190, 190));
         panelCredenzialiLogin.add(loginLabel);
         panelCredenzialiLogin.add(loginF);
 
         panelCredenzialiPsw.setLayout(null);
-        panelCredenzialiPsw.setSize(BoundaryAvvio.Confine.getWidth(), BoundaryAvvio.Confine.getHeight()/5);
+        panelCredenzialiPsw.setSize(BoundaryAvvio.getConfine().getWidth(), BoundaryAvvio.getConfine().getHeight()/5);
         panelCredenzialiPsw.setLocation(5, 200);
         panelCredenzialiPsw.setBackground(new Color(190, 190, 190));
         panelCredenzialiPsw.add(passwordLabel);
         panelCredenzialiPsw.add(passwordF);
 
         panelButtonLogin.setLayout(null);
-        panelButtonLogin.setSize(BoundaryAvvio.Confine.getWidth(), BoundaryAvvio.Confine.getHeight()/5);
+        panelButtonLogin.setSize(BoundaryAvvio.getConfine().getWidth(), BoundaryAvvio.getConfine().getHeight()/5);
         panelButtonLogin.setLocation(5, 330);
         panelButtonLogin.add(bLogin);
 

@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.GregorianCalendar;
 
 
-public class ControlloreRegistraPrenotazioniSingoloPosto extends ControlloreRegistraPrenotazione {
+public class ControlloreRegistraPrenotazioniSingoloPosto implements ControlloreRegistraPrenotazione {
 
     private static String percorsoPrenotatiAppartamento = Constants.PRENOTATI_APPARTAMENTO_PATH;
     private static String percorsoPrenotatiCasaVacanza = Constants.PRENOTATI_CASEVACANZA_PATH;

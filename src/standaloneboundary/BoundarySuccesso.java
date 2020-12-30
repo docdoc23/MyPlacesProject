@@ -51,12 +51,12 @@ public class BoundarySuccesso {
 		
 		pannelloSuccesso = new JPanel();
 		
-		pannelloSuccesso.setSize(BoundaryAvvio.Confine.getWidth(), BoundaryAvvio.Confine.getHeight());
-		BoundaryAvvio.Confine.add(pannelloSuccesso);
+		pannelloSuccesso.setSize(BoundaryAvvio.getConfine().getWidth(), BoundaryAvvio.getConfine().getHeight());
+		BoundaryAvvio.getConfine().add(pannelloSuccesso);
 		pannelloSuccesso.setLayout(null);
 		
         panelTitolo.setLayout(null);
-        panelTitolo.setSize(BoundaryAvvio.Confine.getWidth(), 45);
+        panelTitolo.setSize(BoundaryAvvio.getConfine().getWidth(), 45);
         panelTitolo.setLocation(5, 5);  
         panelTitolo.add(titolo);
         
@@ -70,7 +70,7 @@ public class BoundarySuccesso {
         pannelloSuccesso.add(panelTitolo);	
         
 		panelButtonHome.setLayout(null);
-		panelButtonHome.setSize(BoundaryAvvio.Confine.getWidth(), 150);
+		panelButtonHome.setSize(BoundaryAvvio.getConfine().getWidth(), 150);
 		panelButtonHome.setLocation(5, 30); 
 		
 		

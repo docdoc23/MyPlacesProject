@@ -2,7 +2,7 @@ package controldecorator;
 
 
 //ConcreteComponent
-public class PrezzoBase extends ComponentePrezzo {
+public class PrezzoBase implements ComponentePrezzo {
 
     int prezzo;
 
