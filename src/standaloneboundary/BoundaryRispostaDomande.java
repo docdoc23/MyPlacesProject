@@ -29,8 +29,8 @@ public class BoundaryRispostaDomande {
         private JLabel titolo = new JLabel();
 
         //Text area
-        JTextArea ris_lista = new JTextArea();
-        JScrollPane lista_scroll = new JScrollPane(ris_lista,
+        JTextArea rislista = new JTextArea();
+        JScrollPane listascroll = new JScrollPane(rislista,
             JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED,
             JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
         private JLabel rispondiLabel = new JLabel();
@@ -50,7 +50,7 @@ public class BoundaryRispostaDomande {
 
         // Ascoltatore di bottone e relative azioni
         private RispondiAA ascoltatoreEtAzioneRispondi;
-        private tornaIndietroAA ascoltatoreEtAzioneIndietro;
+        private tornaindietroAA ascoltatoreEtAzioneIndietro;
 
         private ControlloreLinguaAmministratore cl;
 
@@ -119,11 +119,11 @@ public class BoundaryRispostaDomande {
             panelRisposta.setLocation(80, 350);
             panelRisposta.setBackground(new Color(190, 190, 190));
 
-            ris_lista.setSize(panelTitolo.getWidth()/2, 50);
-            ris_lista.setEditable(true);
-            ris_lista.setLineWrap(true);
-            ris_lista.setWrapStyleWord(true);
-            panelRisposta.add(lista_scroll,BorderLayout.CENTER);
+            rislista.setSize(panelTitolo.getWidth()/2, 50);
+            rislista.setEditable(true);
+            rislista.setLineWrap(true);
+            rislista.setWrapStyleWord(true);
+            panelRisposta.add(listascroll,BorderLayout.CENTER);
 
 
 
@@ -147,7 +147,7 @@ public class BoundaryRispostaDomande {
 
             // Ascoltatore di bottone e relativa azione
             ascoltatoreEtAzioneRispondi = new RispondiAA();
-            ascoltatoreEtAzioneIndietro = new tornaIndietroAA();
+            ascoltatoreEtAzioneIndietro = new tornaindietroAA();
 
 
 
@@ -195,7 +195,7 @@ public class BoundaryRispostaDomande {
                 try
                 {
                     pannelloFaqRisposta.setVisible(false);
-                    crf.rispondiComeSuperUtente(domanda, ris_lista.getText());
+                    crf.rispondiComeSuperUtente(domanda, rislista.getText());
 
                 }
                 catch (Exception e)
@@ -208,7 +208,7 @@ public class BoundaryRispostaDomande {
 
 
 
-        private class tornaIndietroAA implements ActionListener
+        private class tornaindietroAA implements ActionListener
         {
             public void actionPerformed(ActionEvent arg0)
             {

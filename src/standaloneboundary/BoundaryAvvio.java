@@ -99,7 +99,7 @@ public class BoundaryAvvio extends StackFrame
         // Associa ascoltatori e bottoni
         bEntra.addActionListener(ascoltatoreEtAzioneEntra);
 
-        //Rendi visibile questo frame;
+        //Rendi visibile questo frame
         this.setVisible(true);
 
     }
@@ -113,7 +113,7 @@ public class BoundaryAvvio extends StackFrame
 		return confine;
 	}
 
-	public void setConfine(JFrame confine) {
+	public static void setConfine(JFrame confine) {
 		BoundaryAvvio.confine = confine;
 	}
 

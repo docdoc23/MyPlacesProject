@@ -43,6 +43,7 @@ public class BoundaryAmministrazione {
         ResourceBundle bundle = this.cl.getBundleFromProp();
 
 		int border = 5;
+		String font = "Arial";
 		
 		pannelloAmministrazione = new JPanel();
 		
@@ -71,19 +72,19 @@ public class BoundaryAmministrazione {
 		bRimuovi = new JButton(bundle.getString("boundaryAmministrazione_rimuovi"));
 		bRimuovi.setLocation(panelButton.getWidth()/2 - panelButton.getWidth()/6,80);
 		bRimuovi.setSize(panelButton.getWidth()/3,50);
-		bRimuovi.setFont(new Font("Arial", 0, 20));
+		bRimuovi.setFont(new Font(font, 0, 20));
 		bRimuovi.setToolTipText(bundle.getString("boundaryAmministrazione_rimuovi"));
 		
 		bNomina = new JButton(bundle.getString("boundaryAmministrazione_crea"));
 		bNomina.setLocation(panelButton.getWidth()/2 - panelButton.getWidth()/6,160);
 		bNomina.setSize(panelButton.getWidth()/3,50);
-		bNomina.setFont(new Font("Arial", 0, 20));
+		bNomina.setFont(new Font(font, 0, 20));
 		bNomina.setToolTipText(bundle.getString("boundaryAmministrazione_nomina"));
 
 		bProfilo = new JButton(bundle.getString("boundaryAmministrazione_gestione_profilo"));
 		bProfilo.setLocation(panelButton.getWidth()/2 - panelButton.getWidth()/6, 320);
         bProfilo.setSize(panelButton.getWidth()/3, 50);
-        bProfilo.setFont(new Font("Arial", 0, 20));
+        bProfilo.setFont(new Font(font, 0, 20));
         bProfilo.setToolTipText(bundle.getString("boundaryAmministrazione_gestione_profilo"));
         if (System.getProperty(Constants.USER_KEY)
                 .equals("root"))
@@ -92,13 +93,13 @@ public class BoundaryAmministrazione {
         bIndietro = new JButton(bundle.getString("boundaryAmministrazione_indietro"));
         bIndietro.setLocation(panelButton.getWidth()/2 - panelButton.getWidth()/6,450);
 		bIndietro.setSize(panelButton.getWidth()/3, 50);
-        bIndietro.setFont(new Font("Arial", 0, 20));
+        bIndietro.setFont(new Font(font, 0, 20));
         bIndietro.setToolTipText(bundle.getString("boundaryAmministrazione_schermata_prec"));
 
 		bRisposta = new JButton(bundle.getString("boundaryAmministrazione_domande"));
 		bRisposta.setLocation(panelButton.getWidth()/2 - panelButton.getWidth()/6,240);
 		bRisposta.setSize(panelButton.getWidth()/3, 50);
-		bRisposta.setFont(new Font("Arial", 0, 20));
+		bRisposta.setFont(new Font(font, 0, 20));
 		bRisposta.setToolTipText(bundle.getString("boundaryAmministrazione_domande"));
 
 		panelButton.add(bRimuovi);

@@ -111,6 +111,7 @@ public class BoundaryProfilo {
         // Inizializzazione
         // Composizione Wrapper
         int border = 5;
+        String font = "Verdana";
         this.pannelloWrapper.setSize(BoundaryAvvio.getConfine()
                 .getWidth(), BoundaryAvvio.getConfine().getHeight());
         BoundaryAvvio.getConfine().add(pannelloWrapper);
@@ -123,7 +124,7 @@ public class BoundaryProfilo {
         this.panelTitolo.add(this.titolo);
 
         // Composizione titolo
-        this.titolo.setFont(new Font("Verdana", Font.BOLD, 20));
+        this.titolo.setFont(new Font(font, Font.BOLD, 20));
         this.titolo.setLocation(border, border);
         this.titolo.setSize(panelTitolo.getWidth(), 35);
         this.titolo.setHorizontalAlignment(JLabel.CENTER);
@@ -138,13 +139,13 @@ public class BoundaryProfilo {
         this.panelUsername.add(usernameLabel);
         this.panelUsername.add(usernameF);
 
-        this.usernameLabel.setFont(new Font("Verdana", Font.BOLD, 15));
+        this.usernameLabel.setFont(new Font(font, Font.BOLD, 15));
         this.usernameLabel.setLocation(130, 20);
         this.usernameLabel.setSize(panelTitolo.getWidth()/2, 30);
         this.usernameLabel.setText(bundle.getString("index_nomeUtente"));
 
         this.usernameF.setEditable(false);
-        this.usernameF.setFont(new Font("Verdana", 0, 15));
+        this.usernameF.setFont(new Font(font, 0, 15));
         this.usernameF.setLocation(300,15);
         this.usernameF.setSize(panelTitolo.getWidth()/2, 30);
 
@@ -156,12 +157,12 @@ public class BoundaryProfilo {
         this.panelOldPassword.add(oldPasswordLabel);
         this.panelOldPassword.add(oldPasswordF);
 
-        this.oldPasswordLabel.setFont(new Font("Verdana", Font.BOLD, 15));
+        this.oldPasswordLabel.setFont(new Font(font, Font.BOLD, 15));
         this.oldPasswordLabel.setLocation(130, 20);
         this.oldPasswordLabel.setSize(panelTitolo.getWidth()/2, 30);
         this.oldPasswordLabel.setText(bundle.getString("modificaProfiloUtente_vecchiaPsw"));
 
-        this.oldPasswordF.setFont(new Font("Verdana", 0, 15));
+        this.oldPasswordF.setFont(new Font(font, 0, 15));
         this.oldPasswordF.setLocation(300,15);
         this.oldPasswordF.setSize(panelTitolo.getWidth()/2, 30);
 
@@ -173,12 +174,12 @@ public class BoundaryProfilo {
         this.panelNewPassword.add(newPasswordLabel);
         this.panelNewPassword.add(newPasswordF);
 
-        this.newPasswordLabel.setFont(new Font("Verdana", Font.BOLD, 15));
+        this.newPasswordLabel.setFont(new Font(font, Font.BOLD, 15));
         this.newPasswordLabel.setLocation(130, 20);
         this.newPasswordLabel.setSize(panelTitolo.getWidth()/2, 30);
         this.newPasswordLabel.setText(bundle.getString("modificaProfiloUtente_nuovaPsw"));
 
-        this.newPasswordF.setFont(new Font("Verdana", 0, 15));
+        this.newPasswordF.setFont(new Font(font, 0, 15));
         this.newPasswordF.setLocation(300,15);
         this.newPasswordF.setSize(panelTitolo.getWidth()/2, 30);
 
@@ -190,12 +191,12 @@ public class BoundaryProfilo {
         this.panelEmail.add(emailLabel);
         this.panelEmail.add(emailF);
 
-        this.emailLabel.setFont(new Font("Verdana", Font.BOLD, 15));
+        this.emailLabel.setFont(new Font(font, Font.BOLD, 15));
         this.emailLabel.setLocation(130, 20);
         this.emailLabel.setSize(panelTitolo.getWidth()/2, 30);
         this.emailLabel.setText(bundle.getString("index_email"));
 
-        this.emailF.setFont(new Font("Verdana", 0, 15));
+        this.emailF.setFont(new Font(font, 0, 15));
         this.emailF.setLocation(300,15);
         this.emailF.setSize(panelTitolo.getWidth()/2, 30);
 
@@ -205,7 +206,7 @@ public class BoundaryProfilo {
         this.panelResultOp.setLocation(5, 400);
         this.panelResultOp.add(resultLabel);
 
-        this.resultLabel.setFont(new Font("Verdana", Font.BOLD, 20));
+        this.resultLabel.setFont(new Font(font, Font.BOLD, 20));
         this.resultLabel.setLocation(300, 20);
         this.resultLabel.setSize(panelTitolo.getWidth()/2, 30);
         this.resultLabel.setVisible(false);
@@ -217,7 +218,7 @@ public class BoundaryProfilo {
         this.panelBox.add(boxLabel);
         this.panelBox.add(box);
 
-        this.boxLabel.setFont(new Font("Verdana", Font.BOLD, 15));
+        this.boxLabel.setFont(new Font(font, Font.BOLD, 15));
         this.boxLabel.setLocation(450, 20);
         this.boxLabel.setSize(panelTitolo.getWidth()/2, 30);
         this.boxLabel.setText(bundle.getString("modificaProfiloUtente_linguaCorrente"));
@@ -348,9 +349,9 @@ public class BoundaryProfilo {
             );
 
             try {
-                this.aClass
-                        .getConstructor(int.class)
-                        .newInstance(response);
+                this.aClass.getDeclaredConstructor(int.class).newInstance(response);
+                        //.getConstructor(int.class)
+                        //.newInstance(response)
             } catch (IllegalAccessException |
                     InstantiationException |
                     NoSuchMethodException |

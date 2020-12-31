@@ -41,6 +41,7 @@ class BoundaryGestioneDomande {
         ResourceBundle bundle = this.cl.getBundleFromProp();
 
         int border = 5;
+        String font = "Arial";
 
         pannelloAmministrazione = new JPanel();
 
@@ -69,19 +70,19 @@ class BoundaryGestioneDomande {
         bRispondi = new JButton(bundle.getString("boundaryDomande_rispondi_domande"));
         bRispondi.setLocation(panelButton.getWidth()/2 - panelButton.getWidth()/6,80);
         bRispondi.setSize(panelButton.getWidth()/3,50);
-        bRispondi.setFont(new Font("Arial", 0, 20));
+        bRispondi.setFont(new Font(font, 0, 20));
         bRispondi.setToolTipText(bundle.getString("boundaryDomande_domande_utenti"));
 
         bRimuoviDati = new JButton(bundle.getString("boundaryDomande_rimuovi"));
         bRimuoviDati.setLocation(panelButton.getWidth()/2 - panelButton.getWidth()/6,160);
         bRimuoviDati.setSize(panelButton.getWidth()/3,50);
-        bRimuoviDati.setFont(new Font("Arial", 0, 20));
+        bRimuoviDati.setFont(new Font(font, 0, 20));
         bRimuoviDati.setToolTipText(bundle.getString("boundaryDomande_inappropriate"));
 
         bIndietro = new JButton(bundle.getString("visualizzaPosta_indietro"));
         bIndietro.setLocation(panelButton.getWidth()/2 - panelButton.getWidth()/6,300);
         bIndietro.setSize(panelButton.getWidth()/3, 50);
-        bIndietro.setFont(new Font("Arial", 0, 20));
+        bIndietro.setFont(new Font(font, 0, 20));
         bIndietro.setToolTipText(bundle.getString("boundaryAmministrazione_schermata_prec"));
 
         panelButton.add(bRispondi);

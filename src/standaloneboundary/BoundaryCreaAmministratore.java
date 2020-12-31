@@ -4,7 +4,7 @@ import javax.swing.*;
 
 import standalonecontrol.ControlloreCreaAmministratore;
 import standalonecontrol.ControlloreLinguaAmministratore;
-import standaloneboundary.BoundaryAvvio;
+
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -15,28 +15,28 @@ public class BoundaryCreaAmministratore {
 
 
 	//Pannelli
-	public JPanel pannelloCreazione;
-	public JPanel panelTitolo = new JPanel();
-	public JPanel panelUsername = new JPanel();
-	public JPanel panelPassword = new JPanel();
-	public JPanel panelButtonCrea = new JPanel();
+	private JPanel pannelloCreazione;
+	private JPanel panelTitolo = new JPanel();
+	private JPanel panelUsername = new JPanel();
+	private JPanel panelPassword = new JPanel();
+	private JPanel panelButtonCrea = new JPanel();
 
 	//Label
-	public JLabel titolo = new JLabel();
+	private JLabel titolo = new JLabel();
 
 	//Bottoni
-	public JButton bNomina;
-	public JButton bIndietro;
+	private JButton bNomina;
+	private JButton bIndietro;
 
 	// Campi e loro etichette
-	public JLabel usernameLabel = new JLabel();
-	public JTextField usernameF = new JTextField();
-	public JLabel passwordLabel = new JLabel();
-	public JPasswordField passwordF = new JPasswordField();
+	private JLabel usernameLabel = new JLabel();
+	private JTextField usernameF = new JTextField();
+	private JLabel passwordLabel = new JLabel();
+	private JPasswordField passwordF = new JPasswordField();
 
 	// Ascoltatore di bottone e relativa azioni
 	private CreaAA ascoltatoreEtAzioneCrea;
-	private tornaIndietroAA ascoltatoreEtAzioneIndietro;
+	private tornaIndietroAa ascoltatoreEtAzioneIndietro;
 	private ControlloreLinguaAmministratore cl;
 
 
@@ -46,6 +46,7 @@ public class BoundaryCreaAmministratore {
         ResourceBundle bundle = this.cl.getBundleFromProp();
 
 		int border = 5;
+		String font = "Verdana";
 
 		pannelloCreazione = new JPanel();
 		pannelloCreazione.setSize(BoundaryAvvio.getConfine().getWidth(), BoundaryAvvio.getConfine().getHeight());
@@ -59,7 +60,7 @@ public class BoundaryCreaAmministratore {
 		panelTitolo.setLocation(5, 5);
 		panelTitolo.add(titolo);
 
-		titolo.setFont(new Font("Verdana", Font.BOLD, 20));
+		titolo.setFont(new Font(font, Font.BOLD, 20));
 		titolo.setLocation(border, border);
 		titolo.setSize(panelTitolo.getWidth(), 35);
 		titolo.setHorizontalAlignment(JLabel.CENTER);
@@ -71,18 +72,18 @@ public class BoundaryCreaAmministratore {
 
 		// Creazione etichette campi con relativi nomi
 
-		usernameLabel.setFont(new Font("Verdana", Font.BOLD, 15));
+		usernameLabel.setFont(new Font(font, Font.BOLD, 15));
 		usernameLabel.setLocation(150, 50);
 		usernameLabel.setSize(panelTitolo.getWidth()/2, 30);
 		usernameLabel.setText(bundle.getString("index_nomeUtente"));
 
 
 		usernameF = new JTextField("", 60);
-		usernameF.setFont(new Font("Verdana", 0, 15));
+		usernameF.setFont(new Font(font, 0, 15));
 		usernameF.setLocation(300,50);
 		usernameF.setSize(panelTitolo.getWidth()/2, 30);
 
-		passwordLabel.setFont(new Font("Verdana", Font.BOLD, 15));
+		passwordLabel.setFont(new Font(font, Font.BOLD, 15));
 		passwordLabel.setLocation(150, 50);
 		passwordLabel.setSize(panelTitolo.getWidth()/2, 30);
 		passwordLabel.setText(bundle.getString("index_password"));
@@ -91,7 +92,7 @@ public class BoundaryCreaAmministratore {
 		passwordF = new JPasswordField("", 60);
 		passwordF.setLocation(300,50);
 		passwordF.setSize(panelTitolo.getWidth()/2, 30);
-		passwordF.setFont(new Font("Verdana", 0, 15));
+		passwordF.setFont(new Font(font, 0, 15));
 
 		// Creazione bottoni
 		bNomina = new JButton(bundle.getString("boundaryAmministrazione_crea"));
@@ -140,7 +141,7 @@ public class BoundaryCreaAmministratore {
 
 		// Ascoltatori dei bottoni e relativa azione
 		ascoltatoreEtAzioneCrea = new CreaAA();
-		ascoltatoreEtAzioneIndietro = new tornaIndietroAA();
+		ascoltatoreEtAzioneIndietro = new tornaIndietroAa();
 
 
 		// Associazione di bottone a relativo ascoltatore
@@ -178,7 +179,7 @@ public class BoundaryCreaAmministratore {
 		}
 	}
 
-	private class tornaIndietroAA implements ActionListener
+	private class tornaIndietroAa implements ActionListener
 	{
 		public void actionPerformed(ActionEvent arg0)
 		{

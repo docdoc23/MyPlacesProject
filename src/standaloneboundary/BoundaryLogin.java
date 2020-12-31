@@ -16,15 +16,15 @@ public class BoundaryLogin extends JFrame
 
 
     //Pannelli
-    public JPanel  pannelloLogin;
-    public JPanel panelTitolo = new JPanel();
-    public JPanel panelCredenzialiLogin = new JPanel();
-    public JPanel panelCredenzialiPsw = new JPanel();
-    public JPanel panelButtonLogin = new JPanel();
-    public JPanel panelBox = new JPanel();
+    private JPanel  pannelloLogin;
+    private JPanel panelTitolo = new JPanel();
+    private JPanel panelCredenzialiLogin = new JPanel();
+    private JPanel panelCredenzialiPsw = new JPanel();
+    private JPanel panelButtonLogin = new JPanel();
+    private JPanel panelBox = new JPanel();
 
     //Label
-    public JLabel titolo = new JLabel();
+    private JLabel titolo = new JLabel();
     private JLabel boxLabel;
 
     private BoxSelectItem ascoltatoreBox;
@@ -57,6 +57,7 @@ public class BoundaryLogin extends JFrame
         ResourceBundle bundle = this.cl.getBundleFromProp();
 
         int border = 5;
+        String font = "Verdana";
 
         pannelloLogin = new JPanel();
 
@@ -71,7 +72,7 @@ public class BoundaryLogin extends JFrame
         panelTitolo.setLocation(5, 5);
         panelTitolo.add(titolo);
 
-        titolo.setFont(new Font("Verdana", Font.BOLD, 20));
+        titolo.setFont(new Font(font, Font.BOLD, 20));
         titolo.setLocation(border, border);
         titolo.setSize(panelTitolo.getWidth(), 35);
         titolo.setHorizontalAlignment(JLabel.CENTER);
@@ -85,27 +86,27 @@ public class BoundaryLogin extends JFrame
         this.panelBox.add(boxLabel);
         this.panelBox.add(box);
 
-        this.boxLabel.setFont(new Font("Verdana", Font.BOLD, 15));
+        this.boxLabel.setFont(new Font(font, Font.BOLD, 15));
         this.boxLabel.setLocation(450, 20);
         this.boxLabel.setSize(panelTitolo.getWidth()/2, 30);
         this.boxLabel.setText(bundle.getString("modificaProfiloUtente_linguaCorrente"));
 
         pannelloLogin.add(panelTitolo);
 
-        loginLabel.setFont(new Font("Verdana", Font.BOLD, 15));
+        loginLabel.setFont(new Font(font, Font.BOLD, 15));
         loginLabel.setLocation(150, 50);
         loginLabel.setSize(panelTitolo.getWidth()/2, 30);
         loginLabel.setText(bundle.getString("index_nomeUtente"));
 
 
         loginF = new JTextField("", 60);
-        loginF.setFont(new Font("Verdana", 0, 15));
+        loginF.setFont(new Font(font, 0, 15));
         loginF.setLocation(300,50);
         loginF.setSize(panelTitolo.getWidth()/2, 30);
 
 
 
-        passwordLabel.setFont(new Font("Verdana", Font.BOLD, 15));
+        passwordLabel.setFont(new Font(font, Font.BOLD, 15));
         passwordLabel.setLocation(150, 50);
         passwordLabel.setSize(panelTitolo.getWidth()/2, 30);
         passwordLabel.setText(bundle.getString("index_password"));
@@ -113,7 +114,7 @@ public class BoundaryLogin extends JFrame
         passwordF = new JPasswordField("", 60);
         passwordF.setLocation(300,50);
         passwordF.setSize(panelTitolo.getWidth()/2, 30);
-        passwordF.setFont(new Font("Verdana", 0, 15));
+        passwordF.setFont(new Font(font, 0, 15));
 
         // Creazione bottone
         bLogin = new JButton(bundle.getString("index_accedi"));

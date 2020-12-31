@@ -16,15 +16,15 @@ private static final long	serialVersionUID	= 1L;
 	
 
 	// Pannelli
-	public JPanel pannelloLoginErrato;	
-	public JPanel panelTitolo = new JPanel();
-	public JPanel panelButtonIndietro = new JPanel();
+	private JPanel pannelloLoginErrato;	
+	private JPanel panelTitolo = new JPanel();
+	private JPanel panelButtonIndietro = new JPanel();
 	
 	//Label
-	public JLabel titolo = new JLabel();
+	private JLabel titolo = new JLabel();
 	
 	//Bottone
-	public JButton bIndietro; 
+	private JButton bIndietro; 
 	
 	// Ascoltatore di bottone e relativa azioni
 	private IndietroAA ascoltatoreEtAzioneIndietro;

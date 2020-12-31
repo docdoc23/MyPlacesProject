@@ -14,17 +14,17 @@ import java.util.ResourceBundle;
 public class BoundaryGestioneUtenti {
 
     // Pannelli
-    public JPanel pannelloAmministrazione;
-    public JPanel panelTitolo = new JPanel();
-    public JPanel panelButton = new JPanel();
+    private JPanel pannelloAmministrazione;
+    private JPanel panelTitolo = new JPanel();
+    private JPanel panelButton = new JPanel();
 
     // Label
-    public JLabel titolo = new JLabel();
+    private JLabel titolo = new JLabel();
 
     //Bottoni
-    public JButton bRimuovi;
-    public JButton bRimuoviDati;
-    public JButton bIndietro;
+    private JButton bRimuovi;
+    private JButton bRimuoviDati;
+    private JButton bIndietro;
 
     // Ascoltatore di bottone e relativa azioni
     private RimuoviAA ascoltatoreEtAzioneRimuovi;
@@ -40,6 +40,7 @@ public class BoundaryGestioneUtenti {
         ResourceBundle bundle = this.cl.getBundleFromProp();
 
         int border = 5;
+        String font = "Arial";
 
         pannelloAmministrazione = new JPanel();
 
@@ -68,19 +69,19 @@ public class BoundaryGestioneUtenti {
         bRimuovi = new JButton(bundle.getString("boundaryGestioneUtenti_rimuovi_utente"));
         bRimuovi.setLocation(panelButton.getWidth()/2 - panelButton.getWidth()/6,80);
         bRimuovi.setSize(panelButton.getWidth()/3,50);
-        bRimuovi.setFont(new Font("Arial", 0, 20));
+        bRimuovi.setFont(new Font(font, 0, 20));
         bRimuovi.setToolTipText(bundle.getString("boundaryGestioneUtenti_rimuovi_utente"));
 
         bRimuoviDati = new JButton(bundle.getString("boundaryGestioneUtenti_rimuovi_dati"));
         bRimuoviDati.setLocation(panelButton.getWidth()/2 - panelButton.getWidth()/6,160);
         bRimuoviDati.setSize(panelButton.getWidth()/3,50);
-        bRimuoviDati.setFont(new Font("Arial", 0, 20));
+        bRimuoviDati.setFont(new Font(font, 0, 20));
         bRimuoviDati.setToolTipText(bundle.getString("boundaryGestioneUtenti_rimuovi_dati"));
 
         bIndietro = new JButton(bundle.getString("boundaryProfilo_indietro"));
         bIndietro.setLocation(panelButton.getWidth()/2 - panelButton.getWidth()/6,300);
         bIndietro.setSize(panelButton.getWidth()/3, 50);
-        bIndietro.setFont(new Font("Arial", 0, 20));
+        bIndietro.setFont(new Font(font, 0, 20));
         bIndietro.setToolTipText(bundle.getString("boundaryAmministrazione_schermata_prec"));
 
         panelButton.add(bRimuovi);

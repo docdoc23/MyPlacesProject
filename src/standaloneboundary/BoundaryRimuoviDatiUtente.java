@@ -14,37 +14,37 @@ import java.util.ResourceBundle;
 public class BoundaryRimuoviDatiUtente {
 
     //Pannelli
-    public JPanel pannelloRimuoviDati;
-    public JPanel panelTitolo = new JPanel();
-    public JPanel panelUser = new JPanel();
-    public JPanel panelButton = new JPanel();
-    public JPanel panelVisualButton= new JPanel();
-    public JPanel panelTextArea = new JPanel();
+    private JPanel pannelloRimuoviDati;
+    private JPanel panelTitolo = new JPanel();
+    private JPanel panelUser = new JPanel();
+    private JPanel panelButton = new JPanel();
+    private JPanel panelVisualButton= new JPanel();
+    private JPanel panelTextArea = new JPanel();
 
     //Label
-    public JLabel titolo = new JLabel();
+    private JLabel titolo = new JLabel();
 
     //Area di testo
-    JTextArea utenti_lista = new JTextArea();
-    JScrollPane lista_scroll = new JScrollPane(utenti_lista,
+    JTextArea utentilista = new JTextArea();
+    JScrollPane listascroll = new JScrollPane(utentilista,
             JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED,
             JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 
 
     //Bottone
-    public JButton bVisualizza;
-    public JButton bRimuovi;
-    public JButton bIndietro;
+    private JButton bVisualizza;
+    private JButton bRimuovi;
+    private JButton bIndietro;
 
 
     // Campi e loro etichette
-    public JLabel rimuoviLabel = new JLabel();
-    public JTextField rimuoviF = new JTextField();
+    private JLabel rimuoviLabel = new JLabel();
+    private JTextField rimuoviF = new JTextField();
 
     // Ascoltatore di bottone e relative azioni
     private RimuoviDatiAA ascoltatoreEtAzioneRimuoviDati;
     private VisualizzaAA ascoltatoreEtAzioneVisualizza;
-    private tornaIndietroAA ascoltatoreEtAzioneIndietro;
+    private tornaindietroAa ascoltatoreEtAzioneIndietro;
 
     private ControlloreLinguaAmministratore cl;
 
@@ -54,6 +54,8 @@ public class BoundaryRimuoviDatiUtente {
         ResourceBundle bundle = this.cl.getBundleFromProp();
 
         int border = 5;
+        String fontv = "Verdana";
+        String fonta = "Arial";
 
         pannelloRimuoviDati = new JPanel();
 
@@ -65,10 +67,10 @@ public class BoundaryRimuoviDatiUtente {
         panelTextArea.setSize(BoundaryAvvio.getConfine().getWidth()*8/9, BoundaryAvvio.getConfine().getHeight()/6);
         panelTextArea.setLocation(50, 50);
 
-        utenti_lista.setEditable(false);
-        utenti_lista.setLineWrap(true);
-        utenti_lista.setWrapStyleWord(true);
-        panelTextArea.add(lista_scroll,BorderLayout.CENTER);
+        utentilista.setEditable(false);
+        utentilista.setLineWrap(true);
+        utentilista.setWrapStyleWord(true);
+        panelTextArea.add(listascroll,BorderLayout.CENTER);
 
 
         panelTitolo.setLayout(null);
@@ -76,7 +78,7 @@ public class BoundaryRimuoviDatiUtente {
         panelTitolo.setLocation(5, 5);
         panelTitolo.add(titolo);
 
-        titolo.setFont(new Font("Verdana", Font.BOLD, 20));
+        titolo.setFont(new Font(fontv, Font.BOLD, 20));
         titolo.setLocation(border, border);
         titolo.setSize(panelTitolo.getWidth(), 35);
         titolo.setHorizontalAlignment(JLabel.CENTER);
@@ -88,14 +90,14 @@ public class BoundaryRimuoviDatiUtente {
 
         // Creazione etichette campi con relativi nomi
 
-        rimuoviLabel.setFont(new Font("Verdana", Font.BOLD, 15));
+        rimuoviLabel.setFont(new Font(fontv, Font.BOLD, 15));
         rimuoviLabel.setLocation(150, 50);
         rimuoviLabel.setSize(panelTitolo.getWidth()/2, 30);
         rimuoviLabel.setText(bundle.getString("index_nomeUtente"));
 
 
         rimuoviF = new JTextField("", 60);
-        rimuoviF.setFont(new Font("Verdana", 0, 15));
+        rimuoviF.setFont(new Font(fontv, 0, 15));
         rimuoviF.setLocation(300,50);
         rimuoviF.setSize(panelTitolo.getWidth()/2, 30);
 
@@ -103,17 +105,17 @@ public class BoundaryRimuoviDatiUtente {
         bVisualizza = new JButton(bundle.getString("boundaryRimuoviUtente_visualizza_utenti"));
         bVisualizza.setLocation(330,0);
         bVisualizza.setSize(panelTitolo.getWidth()/4, 50);
-        bVisualizza.setFont(new Font("Arial", 0, 20));
+        bVisualizza.setFont(new Font(fonta, 0, 20));
 
         bRimuovi = new JButton(bundle.getString("boundaryRimuoviDati_rimuovi_dati"));
         bRimuovi.setLocation(150,10);
         bRimuovi.setSize(panelTitolo.getWidth()/3, 50);
-        bRimuovi.setFont(new Font("Arial", 0, 20));
+        bRimuovi.setFont(new Font(fonta, 0, 20));
 
         bIndietro = new JButton(bundle.getString("boundaryProfilo_indietro"));
         bIndietro.setLocation(300+panelTitolo.getWidth()/4, 10);
         bIndietro.setSize(panelTitolo.getWidth()/4, 50);
-        bIndietro.setFont(new Font("Arial", 0, 20));
+        bIndietro.setFont(new Font(fonta, 0, 20));
         bIndietro.setToolTipText(bundle.getString("boundaryAmministrazione_schermata_prec"));
 
         panelUser.setLayout(null);
@@ -146,7 +148,7 @@ public class BoundaryRimuoviDatiUtente {
         // Ascoltatore di bottone e relativa azione
         ascoltatoreEtAzioneVisualizza = new VisualizzaAA();
         ascoltatoreEtAzioneRimuoviDati = new RimuoviDatiAA();
-        ascoltatoreEtAzioneIndietro = new tornaIndietroAA();
+        ascoltatoreEtAzioneIndietro = new tornaindietroAa();
 
 
 
@@ -182,7 +184,7 @@ public class BoundaryRimuoviDatiUtente {
         {
             try
             {
-                StampaStringhe vu = new StampaStringhe(utenti_lista);
+                StampaStringhe vu = new StampaStringhe(utentilista);
                 vu.visualizzaUtenti();
                 vu.visualizzaUtentiRimossiMaConDati();
             }
@@ -194,7 +196,7 @@ public class BoundaryRimuoviDatiUtente {
     }
 
 
-    private class tornaIndietroAA implements ActionListener
+    private class tornaindietroAa implements ActionListener
     {
         public void actionPerformed(ActionEvent arg0)
         {

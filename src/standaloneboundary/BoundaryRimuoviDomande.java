@@ -24,8 +24,8 @@ public class BoundaryRimuoviDomande {
     public JLabel titolo = new JLabel();
 
     //Area di testo
-    private JTextArea domande_lista = new JTextArea();
-    private JScrollPane lista_scroll = new JScrollPane(domande_lista,
+    private JTextArea domandelista = new JTextArea();
+    private JScrollPane listascroll = new JScrollPane(domandelista,
             JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED,
             JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 
@@ -43,7 +43,7 @@ public class BoundaryRimuoviDomande {
     // Ascoltatore di bottone e relative azioni
     private RimuoviAA ascoltatoreEtAzioneRimuovi;
     private VisualizzaAA ascoltatoreEtAzioneVisualizza;
-    private tornaIndietroAA ascoltatoreEtAzioneIndietro;
+    private tornaindietroAA ascoltatoreEtAzioneIndietro;
 
     ControlloreRimuoviDomande crf;
     private ControlloreLinguaAmministratore cl;
@@ -53,9 +53,11 @@ public class BoundaryRimuoviDomande {
         this.cl = new ControlloreLinguaAmministratore();
         ResourceBundle bundle = this.cl.getBundleFromProp();
 
-        crf = new ControlloreRimuoviDomande(domande_lista);
+        crf = new ControlloreRimuoviDomande(domandelista);
 
         int border = 5;
+        String fontv = "Verdana";
+        String fonta = "Arial";
 
         pannelloRimuovi = new JPanel();
 
@@ -67,10 +69,10 @@ public class BoundaryRimuoviDomande {
         panelTextArea.setSize(BoundaryAvvio.getConfine().getWidth()*8/9, BoundaryAvvio.getConfine().getHeight()/6);
         panelTextArea.setLocation(50, 50);
 
-        domande_lista.setEditable(false);
-        domande_lista.setLineWrap(true);
-        domande_lista.setWrapStyleWord(true);
-        panelTextArea.add(lista_scroll,BorderLayout.CENTER);
+        domandelista.setEditable(false);
+        domandelista.setLineWrap(true);
+        domandelista.setWrapStyleWord(true);
+        panelTextArea.add(listascroll,BorderLayout.CENTER);
 
 
         panelTitolo.setLayout(null);
@@ -78,7 +80,7 @@ public class BoundaryRimuoviDomande {
         panelTitolo.setLocation(5, 5);
         panelTitolo.add(titolo);
 
-        titolo.setFont(new Font("Verdana", Font.BOLD, 20));
+        titolo.setFont(new Font(fontv, Font.BOLD, 20));
         titolo.setLocation(border, border);
         titolo.setSize(panelTitolo.getWidth(), 35);
         titolo.setHorizontalAlignment(JLabel.CENTER);
@@ -90,14 +92,14 @@ public class BoundaryRimuoviDomande {
 
         // Creazione etichette campi con relativi nomi
 
-        rimuoviLabel.setFont(new Font("Verdana", Font.BOLD, 15));
+        rimuoviLabel.setFont(new Font(fontv, Font.BOLD, 15));
         rimuoviLabel.setLocation(150, 50);
         rimuoviLabel.setSize(panelTitolo.getWidth()/2, 30);
         rimuoviLabel.setText(bundle.getString("boundaryDomande_domanda"));
 
 
         rimuoviF = new JTextField("", 60);
-        rimuoviF.setFont(new Font("Verdana", 0, 15));
+        rimuoviF.setFont(new Font(fontv, 0, 15));
         rimuoviF.setLocation(300,50);
         rimuoviF.setSize(panelTitolo.getWidth()/2, 30);
 
@@ -105,17 +107,17 @@ public class BoundaryRimuoviDomande {
         bVisualizza = new JButton(bundle.getString("boundaryDomande_visualizza_domande"));
         bVisualizza.setLocation(300,0);
         bVisualizza.setSize(panelTitolo.getWidth()/3, 50);
-        bVisualizza.setFont(new Font("Arial", 0, 20));
+        bVisualizza.setFont(new Font(fonta, 0, 20));
 
         bRimuovi = new JButton(bundle.getString("boundaryDomande_rimuovi_domanda"));
         bRimuovi.setLocation(200,10);
         bRimuovi.setSize(panelTitolo.getWidth()/4, 50);
-        bRimuovi.setFont(new Font("Arial", 0, 20));
+        bRimuovi.setFont(new Font(fonta, 0, 20));
 
         bIndietro = new JButton(bundle.getString("visualizzaPosta_indietro"));
         bIndietro.setLocation(300+panelTitolo.getWidth()/4, 10);
         bIndietro.setSize(panelTitolo.getWidth()/4, 50);
-        bIndietro.setFont(new Font("Arial", 0, 20));
+        bIndietro.setFont(new Font(fonta, 0, 20));
         bIndietro.setToolTipText(bundle.getString("boundaryAmministrazione_schermata_prec"));
 
         panelDomanda.setLayout(null);
@@ -148,7 +150,7 @@ public class BoundaryRimuoviDomande {
         // Ascoltatore di bottone e relativa azione
         ascoltatoreEtAzioneVisualizza = new VisualizzaAA();
         ascoltatoreEtAzioneRimuovi = new RimuoviAA();
-        ascoltatoreEtAzioneIndietro = new tornaIndietroAA();
+        ascoltatoreEtAzioneIndietro = new tornaindietroAA();
 
 
 
@@ -197,7 +199,7 @@ public class BoundaryRimuoviDomande {
     }
 
 
-    private class tornaIndietroAA implements ActionListener
+    private class tornaindietroAA implements ActionListener
     {
         public void actionPerformed(ActionEvent arg0)
         {
