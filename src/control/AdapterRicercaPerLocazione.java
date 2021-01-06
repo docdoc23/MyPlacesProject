@@ -32,6 +32,8 @@ public class AdapterRicercaPerLocazione implements ControlloreRicercaPerLocazion
 
         List<Locazione> elencoLocazioni;
         elencoLocazioni =  crg.ricercaGlobale(provincia,prezzo,numeroGiorni);
+        
+        
 
         switch (tipoLocazione) {
             case "Albergo":
@@ -101,7 +103,9 @@ public class AdapterRicercaPerLocazione implements ControlloreRicercaPerLocazion
     public Object ricercaAvanzata(String tipoLocazione,String provincia, String prezzo,int numeroGiorni, String sParchegio, String sWifi, String sPet ,String caratteristica) throws ClassNotFoundException,
             InstantiationException, IllegalAccessException, DeserializzazioneException, IOException, SerializzazioneException, InterruptedException {
 
-        Boolean parcheggio=false; 
+    	
+    	
+    	Boolean parcheggio=false; 
         Boolean wifi =false;
         Boolean pet=false;
 
