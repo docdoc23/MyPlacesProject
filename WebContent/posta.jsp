@@ -23,6 +23,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>Perfect Places</title>
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css" />
     <link href="../css/style.css" rel="stylesheet" type="text/css" media="screen" />
 </head>
 
@@ -88,7 +89,7 @@
                                                il messaggio direttamente da questo
                                         -->
                                         <a href="mailto:">
-                                            <img src="../css/images/email_client.png" width="250" height="250" alt="Img apri clien email"/>
+                                            <img src="C:/Users/stefa/eclipse-workspace/MyPlaces/WebContent/css/images/email_client.png" width="250" height="250" alt="Img apri clien email"/>
                                         </a>
                                     </center>
                                 </h2>
@@ -97,7 +98,7 @@
                                 <h2 class="title">
                                     <center>
                                         <a href="scriviMessaggio.jsp">
-                                            <img src="../css/images/write_email.png" width="250" height="250" alt="Img scrivi msg"/>
+                                            <img src="C:/Users/stefa/eclipse-workspace/MyPlaces/WebContent/css/images/write_email.png" width="250" height="250" alt="Img scrivi msg"/>
                                         </a>
                                     </center>
                                 </h2>
@@ -106,7 +107,7 @@
                                 <h2 class="title">
                                     <center>
                                         <a href="visualizzaPosta.jsp">
-                                            <img src="../css/images/read_email.png" width="250" height="250" alt="Img leggi msg"/>
+                                            <img src="C:/Users/stefa/eclipse-workspace/MyPlaces/WebContent/css/images/read_email.png" width="250" height="250" alt="Img leggi msg"/>
                                         </a>
                                     </center>
                                 </h2>

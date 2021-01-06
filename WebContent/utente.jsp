@@ -17,6 +17,8 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>Perfect Places</title>
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css" />
+    <script type="text/javascript" src="${pageContext.request.contextPath}/js/functions.js"></script>
     <link href="../css/style.css" rel="stylesheet" type="text/css" media="screen" />
     <script type="text/javascript" src="../js/functions.js"></script>
 </head>
@@ -161,22 +163,22 @@
 							<tr>
 								<td>
                                     <a href="areaViaggiatore.jsp">
-                                        <img  class="imgInizio" src="../css/images/iconaMenuViaggiatore.png"  width="200" height="200" alt="area viaggiatore"/>
+                                        <img  class="imgInizio" src="C:/Users/stefa/eclipse-workspace/MyPlaces/WebContent/css/images/iconaMenuViaggiatore.png"  width="200" height="200" alt="area viaggiatore"/>
                                     </a>
                                 </td>
                                 <td style="padding-left: 50px">
                                     <a href="areaProprietario.jsp">
-                                        <img class="imgInizio" src="../css/images/iconaMenuProprietario.png"  width="200" height="200" alt="area proprietario"/>
+                                        <img class="imgInizio" src="C:/Users/stefa/eclipse-workspace/MyPlaces/WebContent/css/images/iconaMenuProprietario.png"  width="200" height="200" alt="area proprietario"/>
                                     </a>
                                 </td>
                                 <td style="padding-left: 50px">
                                     <a href="profiloUtente.jsp">
-                                        <img class="imgInizio" src="../css/images/iconaMenuProfilo.png"  width="180" height="180" alt="profilo utente"/>
+                                        <img class="imgInizio" src="C:/Users/stefa/eclipse-workspace/MyPlaces/WebContent/css/images/iconaMenuProfilo.png"  width="180" height="180" alt="profilo utente"/>
                                     </a>
                                 </td>
                                 <td style="padding-left: 50px">
                                     <a href="posta.jsp">
-                                        <img class="imgInizio" src="../css/images/iconaMenuPosta.png"  width="230" height="230" alt="profilo utente"/>
+                                        <img class="imgInizio" src="C:/Users/stefa/eclipse-workspace/MyPlaces/WebContent/css/images/iconaMenuPosta.png"  width="230" height="230" alt="profilo utente"/>
                                     </a>
                                 </td>
 							</tr>

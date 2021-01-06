@@ -162,7 +162,7 @@
     width: 100%;
     height: 350px;
     text-align: center;
-    background: url(images/header-wrapper-bg.jpg);
+    background: url(file:///C:/Users/stefa/eclipse-workspace/MyPlaces/WebContent/css/images/header-wrapper-bg.jpg);
 }
 
 /* Languages */
@@ -170,7 +170,7 @@
     position: absolute;
     top: 5%;
     right: 10%;
-    size: 12px;
+    resize: 12px;
 }
 
 label {
@@ -182,7 +182,7 @@ label {
 body {
 	margin: 0;
 	padding: 0;
-	background: #484848 url(images/texture_background.jpg) repeat;
+	background: #484848 url(file:///C:/Users/stefa/eclipse-workspace/MyPlaces/WebContent/css/images/texture_background.jpg) repeat;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 13px;
 	color: #737373;
@@ -553,16 +553,15 @@ ul#orizzontale li{
 
 /*immagini area viggiatore*/
 .cc-selector input{
-    visibility: hidden;
-	margin:0;padding:0;
+    margin:0;padding:0;
 	-webkit-appearance:none;
 	    -moz-appearance:none;
 }
-.albergo{background-image:url(../css/images/albergo.png);}
-.appartamento{background-image:url(../css/images/appartamento.png);}
-.beb{background-image:url(../css/images/beb.jpeg);}
-.casaVacanza{background-image:url(../css/images/casaVacanza.png);}
-.ostello{background-image:url(../css/images/ostello.jpeg);}
+.albergo{background-image:url(file:///C:/Users/stefa/eclipse-workspace/MyPlaces/WebContent/css/images/albergo.png);}
+.appartamento{background-image:url(file:///C:/Users/stefa/eclipse-workspace/MyPlaces/WebContent/css/images/appartamento.png);}
+.beb{background-image:url(file:///C:/Users/stefa/eclipse-workspace/MyPlaces/WebContent/css/images/beb.jpeg);}
+.casaVacanza{background-image:url(file:///C:/Users/stefa/eclipse-workspace/MyPlaces/WebContent/css/images/casaVacanza.png);}
+.ostello{background-image:url(file:///C:/Users/stefa/eclipse-workspace/MyPlaces/WebContent/css/images/ostello.jpeg);}
 
 
 .cc-selector input:active +.drinkcard-cc{*opacity: .9;}
@@ -664,7 +663,7 @@ img {
 	height: 100px;
 	margin: 0;
 	padding: 0;
-	background: #484848 url(images/texture_background.jpg) repeat;
+	background: #484848 url(file:///C:/Users/stefa/eclipse-workspace/MyPlaces/WebContent/css/images/texture_background.jpg) repeat;
 	font-family: 'Open Sans', sans-serif;
 	box-shadow:0 2px 8px #999999;
 	margin-bottom:50px;
@@ -783,5 +782,4 @@ td{
 }
 
 .trRec{}
-
 

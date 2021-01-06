@@ -8,6 +8,8 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>Perfect Places</title>
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css" />
+    <script type="text/javascript" src="${pageContext.request.contextPath}/js/functions.js"></script>
     <link href="../css/style.css" rel="stylesheet" type="text/css" media="screen" />
     <script type="text/javascript" src="../js/functions.js" ></script>
 </head>
@@ -66,7 +68,7 @@
                                     <strong>
                                         <p style="font-size: 30px">Ricerca Locazione</p>
                                         <a href="ricercaLocazione.jsp" >
-                                            <img  class="imgInizio" src="../css/images/iconaLente.png"   width="250" height="250"  alt="ricerca locazione">
+                                            <img  class="imgInizio" src="C:/Users/stefa/eclipse-workspace/MyPlaces/WebContent/css/images/iconaLente.png"   width="250" height="250"  alt="ricerca locazione">
                                         </a>
                             </td>
                             <td >
@@ -75,7 +77,7 @@
                                     <strong>
                                         <p style="font-size: 30px">Visualizza/Rimuovi Prenotazioni</p>
                                         <a href="visualizzaPrenotazioniPerViaggiatore.jsp" >
-                                            <img class="imgInizio" src="../css/images/visualizzaPrenotazioni.jpg" style="margin-left: 90px"  width="250" height="250"  alt="visualizza prenotazioni">
+                                            <img class="imgInizio" src="C:/Users/stefa/eclipse-workspace/MyPlaces/WebContent/css/images/visualizzaPrenotazioni.jpg" style="margin-left: 90px"  width="250" height="250"  alt="visualizza prenotazioni">
                                         </a>
                             </td>
                             <td >
@@ -84,7 +86,7 @@
                                     <strong>
                                 <p style="font-size: 30px;margin-left: 30px">Recensisci una locazione </p>
                                 <a href="inserisciRecensione.jsp" >
-                                    <img class="imgInizio" src="../css/images/iconaInserimento.png" style="margin-left: 50px" width="250" height="250"  alt="inserisci recensioni">
+                                    <img class="imgInizio" src="C:/Users/stefa/eclipse-workspace/MyPlaces/WebContent/css/images/iconaInserimento.png" style="margin-left: 50px" width="250" height="250"  alt="inserisci recensioni">
                                 </a>
                             </td>
                             <td style="clear: both"></td>
