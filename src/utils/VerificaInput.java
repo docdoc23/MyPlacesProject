@@ -91,7 +91,7 @@ public class VerificaInput {
         }
 
         //controlla che le data non siano di anni passati
-        if(gcInizio.get(Calendar.YEAR)<2017|| gcFine.get(Calendar.YEAR)<2017){
+        if(gcInizio.get(Calendar.YEAR)<2020|| gcFine.get(Calendar.YEAR)<2020){
             return false;
         }
         //controlla che la dataFine non sia precedente alla dataInizio
