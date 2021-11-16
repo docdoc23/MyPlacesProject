@@ -318,10 +318,11 @@ public class BoundaryProfilo {
                 pannelloWrapper.setVisible(false);
 
                 try {
-                    this.aClass
-                            .newInstance();
+                	this.aClass.getDeclaredConstructor().newInstance();
+                    /*this.aClass
+                            .newInstance();*/
                 } catch (IllegalAccessException |
-                        InstantiationException ex) {
+                        InstantiationException | IllegalArgumentException | InvocationTargetException | NoSuchMethodException | SecurityException ex) {
                     ex.printStackTrace();
                 }
             }

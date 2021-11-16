@@ -8,6 +8,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.lang.reflect.InvocationTargetException;
 import java.util.ResourceBundle;
 
 public class BoundaryLogin extends JFrame
@@ -202,11 +203,14 @@ public class BoundaryLogin extends JFrame
                 pannelloLogin.setVisible(false);
 
                 try {
-                    this.aClass.newInstance();
+                	//modifica newinstance piu eccezione multipli catch automatici
+                	this.aClass.getDeclaredConstructor().newInstance();
+                    //this.aClass.newInstance();
                 } catch (IllegalAccessException |
-                        InstantiationException ex) {
+                        InstantiationException | IllegalArgumentException | InvocationTargetException | NoSuchMethodException | SecurityException ex) {
                     ex.printStackTrace();
-                }
+                
+				}
             }
         }
     }

@@ -28,7 +28,7 @@ public class BoundaryGestioneUtenti {
 
     // Ascoltatore di bottone e relativa azioni
     private RimuoviAA ascoltatoreEtAzioneRimuovi;
-    
+    private RimuoviDatiAA ascoltatoreEtAzioneRimuoviDati;
     private TornaIndietro ascoltatoreTornaIndietro;
 
     private ControlloreLinguaAmministratore cl;
@@ -85,7 +85,7 @@ public class BoundaryGestioneUtenti {
         bIndietro.setToolTipText(bundle.getString("boundaryAmministrazione_schermata_prec"));
 
         panelButton.add(bRimuovi);
-        //panelButton.add(bRimuoviDati)
+        panelButton.add(bRimuoviDati);
         panelButton.add(bIndietro);
 
         pannelloAmministrazione.add(panelButton);
@@ -94,13 +94,13 @@ public class BoundaryGestioneUtenti {
 
         // Ascoltatore di bottone e relativa azione
         ascoltatoreEtAzioneRimuovi = new RimuoviAA();
-        
+        ascoltatoreEtAzioneRimuoviDati = new RimuoviDatiAA();
         ascoltatoreTornaIndietro = new TornaIndietro();
 
 
         // Associazione di bottone a relativo ascoltatore
         bRimuovi.addActionListener(ascoltatoreEtAzioneRimuovi);
-        
+        bRimuoviDati.addActionListener(ascoltatoreEtAzioneRimuoviDati);
         bIndietro.addActionListener(ascoltatoreTornaIndietro);
 
     }
@@ -125,7 +125,23 @@ public class BoundaryGestioneUtenti {
         }
     }
 
-    
+    private class RimuoviDatiAA implements ActionListener
+    {
+        public void actionPerformed(ActionEvent arg0)
+        {
+            try
+            {
+                pannelloAmministrazione.setVisible(false);
+                new BoundaryRimuoviDatiUtente();
+
+            }
+            catch (Exception e)
+            {
+                e.printStackTrace();
+            }
+        }
+    }
+
     private class TornaIndietro implements ActionListener
     {
         public void actionPerformed(ActionEvent arg0)
